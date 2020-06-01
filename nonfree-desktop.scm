@@ -123,7 +123,13 @@ exec" stumpwm "/bin/stumpwm"))))
    libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
    %base-packages))
 
- (services (cons* (service tor-service-type)
+ (services (cons* (service tor-service-type
+                           (tor-configuration
+                            (plain-file "torrc" "
+# For the Tor Button addon to work properly
+ControlPort 9051
+# Default
+ControlPort 9050")))
                   (service openntpd-service-type)
                   (set-xorg-configuration
                    (xorg-configuration
