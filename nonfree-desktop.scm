@@ -31,7 +31,13 @@
              (gnu packages web-browsers)
              (gnu packages wm)
              (gnu packages xdisorg)
+             (gnu packages xfce)
              (gnu packages xorg)
+
+             (gnu services dbus)
+             (gnu services desktop)
+             (gnu services networking)
+             (gnu services xorg)
              (gnu system nss)
 
              (guix gexp)
@@ -42,12 +48,6 @@
              (nongnu packages linux)        ; NON-FREE
              (nongnu system linux-initrd)   ; NON-FREE
              (srfi srfi-1))
-
-(use-service-modules desktop
-                     dbus
-                     xorg
-                     networking)
-
 
 (operating-system
  (host-name "paranoidal")
@@ -94,14 +94,14 @@
                (supplementary-groups '("wheel" "netdev" "audio" "video" "input")))
               %base-user-accounts))
 
- (skeletons `((".xsession" ,(plain-file "xsession" "#!/bin/sh
-sh export SBCL_HOME=\"$(dirname -- $(dirname -- $(readlink -f $(which sbcl))))/lib/sbcl/\"
+ (skeletons `((".xsession" ,(mixed-text-file "xsession"
+                   "#!/bin/sh
+sh export SBCL_HOME=" sbcl "/lib/sbcl/
 xrdb ~/.Xresources
 sh export GDK_CORE_DEVICE_EVENTS=1
 eval `guix package --search-paths`
 
-exec stumpwm"))))
-
+exec" stumpwm "/bin/stumpwm"))))
 
  (packages
   (cons*
@@ -110,7 +110,7 @@ exec stumpwm"))))
    emacs emacs-sly-quicklisp emacs-guix emacs-sly poppler emacs-pdf-tools
    clhs ; NON-FREE
    ;; Lisp dependencies of my stumpwm. Somewhat awkward way to load deps. Meh.
-   sbcl sbcl-cl-ppcre sbcl-clx-truetype sbcl-stumpwm-ttf-fonts sbcl-dexador sbcl-slynk
+   sbcl sbcl-cl-ppcre sbcl-clx-truetype sbcl-stumpwm-ttf-fonts sbcl-zpng sbcl-dexador sbcl-slynk
    ;; Xorg/linux utilities for stumpwm and stumpwm itself.
    xrdb xev xfontsel xmodmap xset xsetroot xinit xinput xorg-server stumpwm
    ;; Scripting and utility-programming stuff
