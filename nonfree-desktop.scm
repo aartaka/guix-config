@@ -92,10 +92,12 @@
                (supplementary-groups '("wheel" "netdev" "audio" "video" "input")))
               %base-user-accounts))
 
- (skeletons `((".xinitrc" ,(plain-file "xinitrc" "#!/bin/sh
-bash -c \"export SBCL_HOME=\\\"$(dirname -- $(dirname -- $(readlink -f $(which sbcl))))/lib/sbcl/\\\"\"
+ (skeletons `((".xsession" ,(plain-file "xsession" "#!/bin/sh
+sh export SBCL_HOME=\"$(dirname -- $(dirname -- $(readlink -f $(which sbcl))))/lib/sbcl/\"
 xrdb ~/.Xresources
 sh export GDK_CORE_DEVICE_EVENTS=1
+eval `guix package --search-paths`
+
 exec stumpwm"))))
 
 
@@ -115,7 +117,8 @@ exec stumpwm"))))
    p7zip dosfstools file tree unzip git sysfsutils
    unrar ; NON-FREE
    ;; Useful everyday programs.
-   icecat libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
+   icecat next ungoogled-chromium ; Yep, I need all of them
+   libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
    %base-packages))
 
  (services (cons* (service tor-service-type)
