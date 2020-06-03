@@ -107,29 +107,29 @@ exec" stumpwm "/bin/stumpwm"))))
   (cons*
    nss-certs ghostscript
    ;; Because "Emacs is the best operating system..."
-   emacs emacs-sly-quicklisp emacs-guix emacs-sly poppler emacs-pdf-tools
+   emacs emacs-guix emacs-slime poppler emacs-pdf-tools
    clhs ; NON-FREE
    ;; Lisp dependencies of my stumpwm. Somewhat awkward way to load deps. Meh.
-   sbcl sbcl-cl-ppcre sbcl-clx-truetype sbcl-stumpwm-ttf-fonts sbcl-zpng sbcl-dexador sbcl-slynk
+   sbcl sbcl-cl-ppcre sbcl-clx-truetype sbcl-stumpwm-ttf-fonts sbcl-zpng sbcl-dexador cl-slime-swank
    ;; Xorg/linux utilities for stumpwm and stumpwm itself.
    xrdb xev xfontsel xmodmap xset xsetroot xinit xinput xorg-server stumpwm
-   ;; Scripting and utility-programming stuff
+   ;; Scripting and utility-programming.
    python
-   ;; CLI utils
+   ;; CLI utils.
    p7zip dosfstools file tree unzip git sysfsutils
    unrar ; NON-FREE
    ;; Useful everyday programs.
-   icecat next ungoogled-chromium ; Yep, I need all of them
+   icecat next ungoogled-chromium ; Yep, I need all of these
    libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
    %base-packages))
 
  (services (cons* (service tor-service-type
                            (tor-configuration
-                            (plain-file "torrc" "
+                            (config-file (plain-file "torrc" "
 # For the Tor Button addon to work properly
 ControlPort 9051
 # Default
-ControlPort 9050")))
+ControlPort 9050"))))
                   (service openntpd-service-type)
                   (set-xorg-configuration
                    (xorg-configuration
