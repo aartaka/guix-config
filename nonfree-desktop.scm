@@ -119,8 +119,7 @@ exec" stumpwm "/bin/stumpwm"))))
    p7zip dosfstools file tree unzip git sysfsutils
    unrar ; NON-FREE
    ;; Useful everyday programs.
-   icecat next ungoogled-chromium ; Yep, I need all of these
-   libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
+   icecat ungoogled-chromium libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
    %base-packages))
 
  (services (cons* (service tor-service-type
