@@ -7,7 +7,6 @@
    "clang-runtime"
    "clang-toolchain"
    "glibc"
-   "glib"
    "gcc-toolchain"
    "make"
    "cmake"
