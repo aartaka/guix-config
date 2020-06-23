@@ -1,37 +1,9 @@
 (use-modules (gnu)
-             (gnu packages admin)
              (gnu packages bash)
              (gnu packages certs)
-             (gnu packages chromium)
-             (gnu packages compression)
-             (gnu packages disk)
-             (gnu packages emacs)
-             (gnu packages emacs-xyz)
-             (gnu packages file)
-             (gnu packages fonts)
-             (gnu packages fontutils)
-             (gnu packages gcc)
-             (gnu packages ghostscript)
-             (gnu packages gnuzilla)
-             (gnu packages javascript)
-             (gnu packages libreoffice)
-             (gnu packages linux)
              (gnu packages lisp)
-             (gnu packages lisp-xyz)
-             (gnu packages llvm)
-             (gnu packages messaging)
-             (gnu packages networking)
-             (gnu packages password-utils)
-             (gnu packages pdf)
-             (gnu packages pulseaudio)
-             (gnu packages python)
-             (gnu packages tls)
              (gnu packages version-control)
-             (gnu packages video)
-             (gnu packages web-browsers)
              (gnu packages wm)
-             (gnu packages xdisorg)
-             (gnu packages xfce)
              (gnu packages xorg)
 
              (gnu services dbus)
@@ -43,8 +15,6 @@
              (guix gexp)
              (guix packages)
 
-             (nongnu packages compression)  ; NON-FREE
-             (nongnu packages emacs)        ; NON-FREE
              (nongnu packages linux)        ; NON-FREE
              (nongnu system linux-initrd)   ; NON-FREE
              (srfi srfi-1))
@@ -89,7 +59,7 @@
 
  (users (cons (user-account
                (name "aartaka")
-               (comment "The master of the paranoidal machine")
+               (comment "The user of the paranoidal machine")
                (group "users")
                (supplementary-groups '("wheel" "netdev" "audio" "video" "input")))
               %base-user-accounts))
@@ -105,30 +75,9 @@ exec" stumpwm "/bin/stumpwm"))))
 
  (packages
   (cons*
-   nss-certs ghostscript
-   ;; Because "Emacs is the best operating system..."
-   emacs emacs-guix emacs-slime poppler emacs-pdf-tools
-   clhs ; NON-FREE
-   ;; Lisp dependencies of my stumpwm. Somewhat awkward way to load deps. Meh.
-   sbcl sbcl-cl-ppcre sbcl-clx-truetype sbcl-stumpwm-ttf-fonts sbcl-zpng sbcl-dexador cl-slime-swank
-   ;; Xorg/linux utilities for stumpwm and stumpwm itself.
-   xrdb xev xfontsel xmodmap xset xsetroot xinit xinput xorg-server stumpwm
-   ;; Scripting and utility-programming.
-   python
-   ;; CLI utils.
-   p7zip dosfstools file tree unzip git sysfsutils
-   unrar ; NON-FREE
-   ;; Useful everyday programs.
-   icecat ungoogled-chromium libreoffice keepassxc rxvt-unicode pidgin vlc pavucontrol
-   %base-packages))
+   nss-certs xinit xorg-server sbcl stumpwm+slynk git %base-packages))
 
- (services (cons* (service tor-service-type
-                           (tor-configuration
-                            (config-file (plain-file "torrc" "
-# For the Tor Button addon to work properly
-ControlPort 9051
-# Default
-ControlPort 9050"))))
+ (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
                   (set-xorg-configuration
                    (xorg-configuration
