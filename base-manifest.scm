@@ -1,3 +1,5 @@
+(use-modules (gnu packages))
+
 (specifications->manifest
  '("emacs" "emacs-guix" "emacs-slime" "poppler" "emacs-pdf-tools"
    "clhs" ; NON-FREE
@@ -11,4 +13,4 @@
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils" "gnupg" "pinentry"
    "unrar" ; NON-FREE
    ;; Useful everyday programs.
-   "icecat" "ungoogled-chromium" "libreoffice" "keepassxc" "rxvt-unicode" "pidgin" "vlc" "pavucontrol"))
+   "icecat" "libreoffice" "keepassxc" "rxvt-unicode" "vlc" "pavucontrol"))
