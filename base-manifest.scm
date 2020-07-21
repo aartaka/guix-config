@@ -4,7 +4,7 @@
  '("emacs" "emacs-guix" "poppler" "emacs-pdf-tools" "ghostscript"
    "clhs" ; NON-FREE
    ;; Lisp dependencies of my stumpwm. Somewhat awkward way to load deps. Meh.
-   "sbcl-cl-ppcre" "sbcl-clx-truetype" "sbcl-zpng" "sbcl-dexador" "sbcl-slynk"
+   "sbcl-alexandria" "sbcl-cl-ppcre" "sbcl-clx-truetype" "sbcl-zpng" "sbcl-dexador" "sbcl-slynk"
    "stumpwm:lib" "sbcl-stumpwm-ttf-fonts"
    ;; Xorg utilities for stumpwm
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput"
