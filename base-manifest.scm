@@ -1,8 +1,7 @@
 (use-modules (gnu packages))
 
 (specifications->manifest
- '("emacs" "emacs-guix" "poppler" "emacs-pdf-tools" "ghostscript"
-   "clhs" ; NON-FREE
+ '("emacs"
    ;; Lisp dependencies of my stumpwm. Somewhat awkward way to load deps. Meh.
    "sbcl-alexandria" "sbcl-cl-ppcre" "sbcl-clx-truetype" "sbcl-zpng" "sbcl-dexador" "sbcl-slynk"
    "stumpwm:lib" "sbcl-stumpwm-ttf-fonts"
