@@ -1,6 +1,5 @@
 (specifications->manifest
  '("emacs"
-   "font-hack" ; Font my emacs depends on
 
    "llvm"
    "clang"
