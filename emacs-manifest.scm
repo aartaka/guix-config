@@ -2,5 +2,6 @@
 
 (specifications->manifest
  '("emacs" "emacs-guix" "emacs-pdf-tools" "emacs-telega"
-   "ghostscript" "unoconv" "poppler"
+   "ghostscript" "unoconv" "poppler" "imagemagick"
+   "aspell" "aspell-dict-ru" "aspell-dict-en"
    "clhs"))
