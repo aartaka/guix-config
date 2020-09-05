@@ -1,7 +1,5 @@
 (specifications->manifest
- '("emacs"
-
-   "llvm"
+ '("llvm"
    "clang"
    "clang-runtime"
    "clang-toolchain"
@@ -19,5 +17,4 @@
    "xeus"
 
    "guile"
-   "racket"
-   "sbcl"))
+   "racket"))
