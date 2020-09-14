@@ -79,6 +79,7 @@ exec" stumpwm "/bin/stumpwm"))))
 
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
+                  (service connman-service-type)
                   (set-xorg-configuration
                    (xorg-configuration
                     (keyboard-layout
@@ -89,7 +90,9 @@ exec" stumpwm "/bin/stumpwm"))))
                                   "grp:rctrl_toggle"))))
                    gdm-service-type)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
-                  (remove (lambda (s) (eq? (service-kind s) ntp-service-type))
+                  (remove (lambda (s) (or
+                                       (eq? (service-kind s) ntp-service-type)
+                                       (eq? (service-kind s) network-manager-service-type)))
                           %desktop-services)))
 
  ;; Allow resolution of '.local' host names with mDNS.
