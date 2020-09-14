@@ -9,6 +9,7 @@
              (gnu services dbus)
              (gnu services desktop)
              (gnu services networking)
+             (gnu services web)
              (gnu services xorg)
              (gnu system nss)
 
@@ -80,6 +81,13 @@ exec" stumpwm "/bin/stumpwm"))))
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
                   (service connman-service-type)
+                  (service tailon-service-type
+                           (tailon-configuration
+                            (config-file
+                             (tailon-configuration-file
+                              ;; 8080 is used for everything
+                              (bind "localhost:8081")
+                              (debug? #t)))))
                   (set-xorg-configuration
                    (xorg-configuration
                     (keyboard-layout
