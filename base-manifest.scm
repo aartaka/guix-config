@@ -3,7 +3,8 @@
 (specifications->manifest
  '("emacs"
    ;; Lisp dependencies of my stumpwm. Somewhat awkward way to load deps. Meh.
-   "sbcl-alexandria" "sbcl-cl-ppcre" "sbcl-clx-truetype" "sbcl-zpng" "sbcl-dexador" "sbcl-slynk"
+   "sbcl-alexandria" "sbcl-cl-ppcre" "sbcl-clx-truetype" "sbcl-zpng"
+   "sbcl-dexador" "sbcl-slynk" "sbcl-bordeaux-threads"
    "stumpwm:lib" "sbcl-stumpwm-ttf-fonts"
    ;; Fonts
    "font-hack" "font-google-noto" "font-dejavu" "font-liberation"
