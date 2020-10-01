@@ -11,7 +11,7 @@
    ;; Xorg utilities for stumpwm
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput"
    ;; Scripting and everyday programming.
-   "python" "sbcl"
+   "python"
    ;; CLI utils.
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils" "gnupg" "pinentry"
    "unrar" ; NON-FREE
