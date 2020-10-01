@@ -12,6 +12,8 @@
    "binutils"
    "elfutils"
 
+   "mono"
+
    "python"
    "jupyter"
    "xeus"
