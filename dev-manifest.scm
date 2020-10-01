@@ -7,6 +7,7 @@
    "gcc-toolchain"
    "make"
    "cmake"
+   "pkg-config"
    "patchelf"
    "coreutils"
    "binutils"
