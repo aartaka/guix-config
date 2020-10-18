@@ -86,8 +86,7 @@ exec" stumpwm "/bin/stumpwm"))))
                             (config-file
                              (tailon-configuration-file
                               ;; 8080 is used for everything
-                              (bind "localhost:8081")
-                              (debug? #t)))))
+                              (bind "localhost:8081")))))
                   (set-xorg-configuration
                    (xorg-configuration
                     (keyboard-layout
