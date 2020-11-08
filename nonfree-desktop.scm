@@ -1,9 +1,10 @@
 (use-modules (gnu)
              (gnu packages bash)
              (gnu packages certs)
-             (gnu packages lisp)
+             (gnu packages emacs)
+	         (gnu packages emacs-xyz)
+	         (gnu packages fonts)
              (gnu packages version-control)
-             (gnu packages wm)
              (gnu packages xorg)
 
              (gnu services dbus)
@@ -60,23 +61,14 @@
 
  (users (cons (user-account
                (name "aartaka")
-               (comment "The user of the paranoidal machine")
+               (comment "Artyom Bologov")
                (group "users")
                (supplementary-groups '("wheel" "netdev" "audio" "video" "input")))
               %base-user-accounts))
 
- (skeletons `((".xsession" ,(mixed-text-file "xsession"
-                   "#!/bin/sh
-sh export SBCL_HOME=" sbcl "/lib/sbcl/
-xrdb ~/.Xresources
-sh export GDK_CORE_DEVICE_EVENTS=1
-eval `guix package --search-paths`
-
-exec" stumpwm "/bin/stumpwm"))))
-
  (packages
   (cons*
-   nss-certs xinit xorg-server sbcl stumpwm+slynk git %base-packages))
+   nss-certs xinit xorg-server emacs emacs-exwm font-hack git %base-packages))
 
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
