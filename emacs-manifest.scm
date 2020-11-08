@@ -10,6 +10,7 @@
              (gnu packages pdf)
              (gnu packages python-xyz)
              (gnu packages rust-apps)
+             (gnu packages speech)
              (gnu packages tex)
 
              (guix packages)
@@ -18,6 +19,7 @@
 
 (packages->manifest
  (list emacs
+       emacspeak espeak-ng
        emacs-telega emacs-pinentry emacs-pdf-tools emacs-sly sbcl-slynk
        ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
        aspell aspell-dict-ru aspell-dict-en
