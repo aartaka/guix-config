@@ -8,3 +8,4 @@ guix package -m emacs-manifest.scm --profile=$GUIX_EXTRA_PROFILES/emacs-profile/
 guix package -m dev-manifest.scm --profile=$GUIX_EXTRA_PROFILES/dev-profile/dev-profile
 guix package -m gimp-manifest.scm --profile=$GUIX_EXTRA_PROFILES/gimp-profile/gimp-profile
 guix package -m nyxt-manifest.scm --profile=$GUIX_EXTRA_PROFILES/nyxt-profile/nyxt-profile
+guix package -m texlive-manifest.scm --profile=$GUIX_EXTRA_PROFILES/texlive-profile/texlive-profile
