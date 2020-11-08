@@ -4,6 +4,7 @@
    "clang-runtime"
    "clang-toolchain"
    "glibc"
+   "gdb"
    "gcc-toolchain"
    "make"
    "cmake"
