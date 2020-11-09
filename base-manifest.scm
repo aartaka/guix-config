@@ -1,7 +1,7 @@
 (use-modules (gnu packages))
 
 (specifications->manifest
- '("sbcl-alexandria" "sbcl-cl-ppcre" "sbcl-slynk" "sbcl-bordeaux-threads"
+ '("cl-alexandria" "cl-ppcre" "cl-slynk" "cl-bordeaux-threads"
    ;; Fonts
    "font-hack" "font-google-noto" "font-dejavu" "font-liberation" "font-abattis-cantarell"
    ;; Xorg utilities

@@ -20,7 +20,7 @@
 (packages->manifest
  (list emacs
        emacspeak espeak-ng
-       emacs-telega emacs-pinentry emacs-pdf-tools emacs-sly sbcl-slynk
+       emacs-telega emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
        ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
        aspell aspell-dict-ru aspell-dict-en
 
