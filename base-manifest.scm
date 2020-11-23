@@ -7,7 +7,7 @@
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
    ;; Scripting and everyday programming.
-   "python" "sbcl"
+   "python" "sbcl" "ccl"
    ;; CLI utils.
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils" "gnupg"
    "unrar" ; NON-FREE
