@@ -3,7 +3,8 @@
 (specifications->manifest
  '("cl-alexandria" "cl-ppcre" "cl-slynk" "cl-bordeaux-threads"
    ;; Fonts
-   "font-hack" "font-google-noto" "font-dejavu" "font-liberation" "font-abattis-cantarell"
+   "font-hack" "font-google-noto" "font-dejavu" "font-liberation"
+   "font-abattis-cantarell" "font-wqy-microhei"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
    ;; Scripting and everyday programming.
