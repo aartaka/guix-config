@@ -5,4 +5,4 @@
              (guix download))
 
 (packages->manifest
- (lisp gimp)) ; TODO: add the necessary fonts'n'stuff later
+ (list gimp)) ; TODO: add the necessary fonts'n'stuff later
