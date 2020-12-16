@@ -7,6 +7,8 @@
    "font-abattis-cantarell" "font-wqy-microhei"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
+   ;; Bluetooth
+   "bluez" "blueman"
    ;; Scripting and everyday programming.
    "python" "sbcl" "ccl"
    ;; CLI utils.

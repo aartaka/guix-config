@@ -63,7 +63,7 @@
                (name "aartaka")
                (comment "Artyom Bologov")
                (group "users")
-               (supplementary-groups '("wheel" "netdev" "audio" "video" "input")))
+               (supplementary-groups '("wheel" "netdev" "audio" "video" "input" "lp")))
               %base-user-accounts))
 
  (packages
@@ -73,6 +73,7 @@
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
                   (service connman-service-type)
+                  (service bluetooth-service-type)
                   (service tailon-service-type
                            (tailon-configuration
                             (config-file
