@@ -1,5 +1,6 @@
 (use-modules (gnu packages)
              (gnu packages aspell)
+             (gnu packages curl)
              (gnu packages emacs)
              (gnu packages emacs-xyz)
              (gnu packages gnupg)
@@ -21,7 +22,7 @@
  (list emacs
        emacspeak espeak-ng
        emacs-telega emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
-       ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
+       curl ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
        aspell aspell-dict-ru aspell-dict-en
 
        ;; Non-free
