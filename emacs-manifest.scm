@@ -13,6 +13,7 @@
              (gnu packages rust-apps)
              (gnu packages speech)
              (gnu packages tex)
+             (gnu packages wordnet)
 
              (guix packages)
 
@@ -24,6 +25,7 @@
        emacs-telega emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
        curl ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
        aspell aspell-dict-ru aspell-dict-en
+       wordnet
 
        ;; Non-free
        clhs))
