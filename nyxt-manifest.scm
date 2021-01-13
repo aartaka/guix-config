@@ -6,6 +6,11 @@
     "make"
     "sbcl"
     "webkitgtk"                         ; TODO: Remove when cl-webkit is updated.
+    ;; Qt
+    "qtbase"
+    "qtwebengine"
+    "qtwebchannel"
+    "qtdeclarative"
 
     "cl-slynk"                          ; To hack Nyxt from the SLY REPL.
 
