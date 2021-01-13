@@ -80,6 +80,10 @@
                              (tailon-configuration-file
                               ;; 8080 is used for everything
                               (bind "localhost:8081")))))
+                  (pam-limits-service
+                   (list
+                    (pam-limits-entry "@realtime" 'both 'rtprio 99)
+                    (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
                   (set-xorg-configuration
                    (xorg-configuration
                     (keyboard-layout
