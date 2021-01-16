@@ -5,6 +5,8 @@
    ;; Fonts
    "font-hack" "font-dejavu" "font-liberation"
    "font-abattis-cantarell" "font-wqy-microhei"
+   ;; GuixSD essentials and other mandatory packages
+   "glibc-utf8-locales" "libfixposix"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
    ;; Bluetooth
@@ -12,7 +14,9 @@
    ;; Scripting and everyday programming.
    "python" "sbcl" "ccl"
    ;; CLI utils.
-   "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils" "gnupg"
+   "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils"
+   "gnupg" "pinentry" "emacs-pinentry"
    "unrar" ; NON-FREE
    ;; Useful everyday programs.
-   "ungoogled-chromium" "icecat" "libreoffice" "keepassxc" "rxvt-unicode" "vlc" "pavucontrol"))
+   "ungoogled-chromium" "icecat" "libreoffice" "keepassxc" "rxvt-unicode"
+   "vlc" "pavucontrol" "protonvpn-cli"))
