@@ -2,6 +2,7 @@
 
 cp -f channels.scm ~/.config/guix/channels.scm
 cp -f nonfree-desktop.scm /etc/nonfree-desktop.scm
+cp -f profile ~/.profile
 guix pull
 
 profile_names=("emacs" "dev" "gimp" "nyxt" "texlive")
