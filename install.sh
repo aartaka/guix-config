@@ -1,9 +1,8 @@
 #!/bin/bash
 
 cp -f channels.scm ~/.config/guix/channels.scm
-cp -f nonfree-desktop.scm /etc/nonfree-desktop.scm
 cp -f profile ~/.profile
-guix pull
+cp -f xinitrc ~/.xinitrc
 
 profile_names=("emacs" "dev" "gimp" "nyxt" "texlive")
 for NAME in ${profile_names[*]}; do
