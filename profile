@@ -1,9 +1,7 @@
 #!/bin/sh
 
-export GUIX_EXTRA_PROFILES="$HOME"/.guix-extra-profiles
-
 # Activate all the profiles
-for i in $GUIX_EXTRA_PROFILES/*; do
+for i in ~/.guix-extra-profiles/*; do
     profile=$i/$(basename "$i")
     if [ -f "$profile"/etc/profile ]; then
   		GUIX_PROFILE="$profile" ; . "$profile"/etc/profile
