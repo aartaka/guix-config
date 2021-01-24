@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cp -f channels.scm ~/.config/guix/channels.scm
 cp -f profile ~/.profile
 cp -f xinitrc ~/.xinitrc
 
