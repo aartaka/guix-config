@@ -61,8 +61,7 @@
               %base-user-accounts))
 
  (packages
-  (cons*
-   nss-certs xinit xorg-server emacs emacs-exwm font-hack git %base-packages))
+  (cons* nss-certs xinit xorg-server git %base-packages))
 
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
