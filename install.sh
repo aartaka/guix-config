@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -f profile ~/.profile
+cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
 
 profile_names=("emacs" "dev" "gimp" "nyxt" "texlive")

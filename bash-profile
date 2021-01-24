@@ -1,4 +1,5 @@
-#!/bin/sh
+# Honor per-interactive-shell startup file
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 
 # Activate all the profiles
 for i in ~/.guix-extra-profiles/*; do
