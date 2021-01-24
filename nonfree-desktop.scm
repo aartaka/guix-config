@@ -27,7 +27,7 @@
 
  (kernel linux)                       ; NON-FREE
  (initrd microcode-initrd)            ; NON-FREE
- (firmware (cons* atheros-firmware    ; NON-FREE
+ (firmware (cons* iwlwifi-firmware    ; NON-FREE
                   %base-firmware))
 
  (bootloader (bootloader-configuration
@@ -37,33 +37,27 @@
 
  (mapped-devices
   (list (mapped-device
-         (source "/dev/sdb3")
+         (source "/dev/nvme0n1p2")
          (target "cryptroot")
          (type luks-device-mapping))))
 
  (file-systems (append
                 (list (file-system
-                       (device (file-system-label "CRYPTROOT"))
-                       (mount-point "/")
-                       (type "btrfs")
-                       (dependencies mapped-devices))
+		               (device (file-system-label "CRYPTROOT"))
+		               (mount-point "/")
+		               (type "btrfs")
+		               (dependencies mapped-devices))
                       (file-system
-                       (device (file-system-label "ESP"))
-                       (mount-point "/boot/efi")
-                       (type "vfat"))
-                      (file-system
-                       (device (file-system-label "STORAGE"))
-                       (mount-point "/storage")
-                       (type "btrfs")))
+		               (device (file-system-label "ESP"))
+		               (mount-point "/boot/efi")
+		               (type "vfat")))
                 %base-file-systems))
 
- (swap-devices `("dev/sdb2"))
-
  (users (cons (user-account
-               (name "aartaka")
-               (comment "Artyom Bologov")
-               (group "users")
-               (supplementary-groups '("wheel" "netdev" "audio" "video" "input" "lp")))
+	           (name "aartaka")
+	           (comment "Artyom Bologov")
+	           (group "users")
+	           (supplementary-groups '("wheel" "netdev" "audio" "video" "input" "lp")))
               %base-user-accounts))
 
  (packages
@@ -95,8 +89,8 @@
                    gdm-service-type)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
                   (remove (lambda (s) (or
-                                       (eq? (service-kind s) ntp-service-type)
-                                       (eq? (service-kind s) network-manager-service-type)))
+				                       (eq? (service-kind s) ntp-service-type)
+				                       (eq? (service-kind s) network-manager-service-type)))
                           %desktop-services)))
 
  ;; Allow resolution of '.local' host names with mDNS.
