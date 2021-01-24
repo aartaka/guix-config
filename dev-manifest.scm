@@ -1,5 +1,6 @@
 (use-modules (gnu packages)
              (gnu packages base)
+	         (gnu packages cmake)
              (gnu packages commencement)
              (gnu packages elf)
              (gnu packages gdb)
@@ -24,4 +25,4 @@
        ;; Python & Jupyter
        python jupyter xeus
        ;; Lisps that are not CL
-       guile racket))
+       racket))
