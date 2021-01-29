@@ -1,10 +1,6 @@
 # Honor per-interactive-shell startup file
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 
-# Set system time to the one given by hardware clock
-# Multi-boot issues :(
-hwclock -sl
-
 # Activate all the profiles
 for i in ~/.guix-extra-profiles/*; do
     profile=$i/$(basename "$i")
