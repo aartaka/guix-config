@@ -8,7 +8,7 @@
    ;; GuixSD essentials and other mandatory packages
    "glibc-utf8-locales" "libfixposix"
    ;; Xorg utilities
-   "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
+   "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape" "xclip"
    ;; Bluetooth
    "bluez" "blueman"
    ;; Scripting and everyday programming.
