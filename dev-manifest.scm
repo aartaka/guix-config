@@ -6,6 +6,7 @@
              (gnu packages gdb)
              (gnu packages guile)
              (gnu packages jupyter)
+             (gnu packages lisp)
              (gnu packages llvm)
              (gnu packages mono)
              (gnu packages pkg-config)
@@ -24,5 +25,7 @@
        mono
        ;; Python & Jupyter
        python jupyter xeus
+       ;; CL
+       ccl ecl
        ;; Lisps that are not CL
        racket))
