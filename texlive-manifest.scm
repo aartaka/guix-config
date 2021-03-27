@@ -1,4 +1,5 @@
 (use-modules (gnu packages)
+             (gnu packages compression)
              (gnu packages fonts)
              (gnu packages tex)
 
@@ -8,4 +9,5 @@
  (list texlive
        biber texlive-biblatex texlive-bibtex
        texlive-latex-natbib texlive-latex-fontspec texlive-latex-polyglossia
-       font-tex-gyre))
+       font-tex-gyre
+       zziplib))
