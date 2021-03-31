@@ -9,5 +9,4 @@ for NAME in ${profile_names[*]}; do
     guix package -m "$NAME-manifest.scm" --profile="$HOME/.guix-extra-profiles/$NAME-profile/$NAME-profile"
 done
 
-guix package -f "/home/aartaka/git/nyxt/build-scripts/guix-sbcl-for-nyxt.scm" --profile="$HOME/.guix-extra-profiles/nyxt-sbcl-profile/nyxt-sbcl-profile"
 guix package -m "base-manifest.scm"
