@@ -28,6 +28,8 @@
  (kernel linux)                       ; NON-FREE
  (initrd microcode-initrd)            ; NON-FREE
  (firmware (cons* iwlwifi-firmware    ; NON-FREE
+                  sof-firmware        ; NON-FREE
+                  intel-microcode     ; NON-FREE
                   %base-firmware))
 
  (bootloader (bootloader-configuration
