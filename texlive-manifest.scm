@@ -7,7 +7,7 @@
 
 (packages->manifest
  (list texlive
-       biber texlive-biblatex texlive-bibtex
+       biber texlive-biblatex texlive-bibtex texlive-beamer
        texlive-latex-natbib texlive-latex-fontspec texlive-latex-polyglossia
        font-tex-gyre
        zziplib))
