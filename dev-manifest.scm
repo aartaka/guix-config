@@ -19,7 +19,7 @@
 (packages->manifest
  (list llvm clang clang-runtime clang-toolchain
        glibc gdb gcc-toolchain
-       cmake pkg-config
+       gnu-make cmake pkg-config
        patchelf coreutils binutils elfutils
        ;; C#
        mono
