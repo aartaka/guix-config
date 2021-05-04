@@ -14,6 +14,8 @@
              (gnu packages python-xyz)
              (gnu packages scheme)
 
+             (nongnu packages dotnet)
+
              (guix packages))
 
 (packages->manifest
@@ -21,8 +23,8 @@
        glibc gdb gcc-toolchain
        gnu-make cmake pkg-config
        patchelf coreutils binutils elfutils
-       ;; C#
-       mono
+       ;; .NET stack
+       mono dotnet
        ;; Python & Jupyter
        python jupyter xeus
        ;; CL
