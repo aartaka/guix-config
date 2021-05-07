@@ -20,4 +20,4 @@
    "unrar" ; NON-FREE
    ;; Useful everyday programs.
    "ungoogled-chromium" "icecat" "libreoffice" "keepassxc" "rxvt-unicode"
-   "vlc" "pavucontrol" "protonvpn-cli"))
+   "st" "vlc" "pavucontrol" "protonvpn-cli"))
