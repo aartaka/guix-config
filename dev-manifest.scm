@@ -27,6 +27,8 @@
        mono dotnet
        ;; Python & Jupyter
        python jupyter xeus
+       ;; Golang
+       go
        ;; CL
        ccl ecl
        ;; Lisps that are not CL
