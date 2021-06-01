@@ -26,10 +26,11 @@
  (timezone "Asia/Yekaterinburg")
 
  (kernel linux)                       ; NON-FREE
+ (kernel-loadable-modules
+  '(sof-firmware))                    ; NON-FREE
  (initrd microcode-initrd)            ; NON-FREE
- (firmware (cons* iwlwifi-firmware    ; NON-FREE
-                  sof-firmware        ; NON-FREE
-                  %base-firmware))
+ (firmware (cons iwlwifi-firmware     ; NON-FREE
+                 %base-firmware))
 
  (bootloader (bootloader-configuration
               (bootloader grub-efi-bootloader)
