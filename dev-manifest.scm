@@ -3,6 +3,7 @@
 	         (gnu packages cmake)
              (gnu packages commencement)
              (gnu packages elf)
+             (gnu packages golang)
              (gnu packages gdb)
              (gnu packages guile)
              (gnu packages jupyter)
@@ -12,6 +13,7 @@
              (gnu packages pkg-config)
              (gnu packages python)
              (gnu packages python-xyz)
+             (gnu packages racket)
              (gnu packages scheme)
 
              (nongnu packages dotnet)
