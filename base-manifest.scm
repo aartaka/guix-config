@@ -18,6 +18,9 @@
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils"
    "gnupg" "pinentry" "emacs-pinentry" "perl"
    "unrar" ; NON-FREE
+   ;; Nyxt media dependencies.
+   "gstreamer" "gst-libav" "gst-plugins-base" "gst-plugins-good"
+   "gst-plugins-bad" "gst-plugins-ugly"
    ;; Useful everyday programs.
    "ungoogled-chromium" "icecat" "libreoffice" "keepassxc" "rxvt-unicode"
    "st" "vlc" "pavucontrol" "protonvpn-cli"))
