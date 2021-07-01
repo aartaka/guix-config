@@ -3,7 +3,7 @@
 (specifications->manifest
  '("cl-alexandria" "cl-ppcre" "cl-slynk" "cl-bordeaux-threads"
    ;; Fonts
-   "font-hack" "font-dejavu" "font-liberation"
+   "font-ibm-plex" "font-dejavu" "font-liberation"
    "font-abattis-cantarell" "font-wqy-microhei"
    ;; GuixSD essentials and other mandatory packages
    "glibc-utf8-locales" "libfixposix"
