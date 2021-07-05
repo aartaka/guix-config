@@ -12,7 +12,7 @@
              (guix packages)
              ((guix licenses) #:prefix license:))
 
-(define-public proto-bridge
+(define-public proton-bridge
   (let ((version "1.8.3"))
     (package
       (name "protonmail-bridge")
@@ -59,4 +59,4 @@ and leaves your computer.")
       (home-page "https://www.protonmail.com/bridge")
       (license license:gpl3+))))
 
-protonmail-bridge
+proton-bridge
