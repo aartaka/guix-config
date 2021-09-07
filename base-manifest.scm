@@ -23,4 +23,4 @@
    "gst-plugins-bad" "gst-plugins-ugly"
    ;; Useful everyday programs.
    "ungoogled-chromium" "icecat" "libreoffice" "keepassxc" "rxvt-unicode"
-   "st" "vlc" "pavucontrol" "protonvpn-cli"))
+   "st" "vlc" "pavucontrol" "protonvpn-cli" "nyxt"))
