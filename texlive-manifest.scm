@@ -9,5 +9,6 @@
  (list texlive
        biber texlive-biblatex texlive-bibtex texlive-beamer
        texlive-latex-natbib texlive-latex-fontspec texlive-latex-polyglossia
+       texlive-latex-cyrillic
        font-tex-gyre
        zziplib))
