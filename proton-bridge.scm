@@ -17,12 +17,12 @@
     (package
       (name "protonmail-bridge")
       (version version)
-      ;;; Replace with:
-      ;; (source (local-file "/path/to/protonmail-bridge_1.8.3-1_amd64.deb" #:recursive? #t))
+      ;;; Replace with this if downloaded locally:
+      ;; (source (local-file "/path/to/protonmail-bridge_1.8.9-1_amd64.deb" #:recursive? #t))
       (source
        (origin
          (method url-fetch)
-         (uri "https://protonmail.com/download/bridge/protonmail-bridge_1.8.3-1_amd64.deb")
+         (uri "https://protonmail.com/download/bridge/protonmail-bridge_1.8.9-1_amd64.deb")
          (sha256
           (base32 "06riilfn6429ips4akjnbmxzb30l0x8254bxbi3sldnmsb0y2fbl"))))
       (supported-systems '("x86_64-linux"))
@@ -49,7 +49,7 @@
                 ("glib" ,glib)
                 ("libsecret" ,libsecret)
                 ("gtk" ,gtk+)
-                ("qtbase" ,qtbase)
+                ("qtbase" ,qtbase-5)
                 ("qtdeclarative" ,qtdeclarative)
                 ("qtsvg" ,qtsvg)))
       (synopsis "ProtonMail Bridge application.")
