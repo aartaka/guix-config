@@ -25,6 +25,7 @@
        glibc gdb gcc-toolchain
        gnu-make cmake pkg-config
        patchelf coreutils binutils elfutils
+       node
        ;; .NET stack
        mono dotnet
        ;; Python & Jupyter

@@ -16,7 +16,7 @@
    "python" "sbcl" "ccl"
    ;; CLI utils and other necessary things.
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils"
-   "gnupg" "pinentry" "emacs-pinentry" "perl"
+   "gnupg" "pinentry" "emacs-pinentry" "perl" "stapler"
    "unrar" ; NON-FREE
    ;; Nyxt media dependencies.
    "gstreamer" "gst-libav" "gst-plugins-base" "gst-plugins-good"
