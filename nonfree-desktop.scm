@@ -5,6 +5,7 @@
 	         (gnu packages emacs-xyz)
 	         (gnu packages fonts)
              (gnu packages version-control)
+             (gnu packages xdisorg)
              (gnu packages xorg)
 
              (gnu services dbus)
@@ -20,6 +21,23 @@
              (nongnu packages linux)        ; NON-FREE
              (nongnu system linux-initrd)   ; NON-FREE
              (srfi srfi-1))
+
+(define %additional-xorg-configuration
+   "Section \"InputClass\"
+    Identifier \"touchpad\"
+    Driver \"synaptics\"
+    MatchIsTouchpad \"on\"
+        Option \"TapButton1\" \"1\"
+        Option \"TapButton2\" \"3\"
+        Option \"TapButton3\" \"2\"
+        Option \"VertTwoFingerScroll\" \"on\"
+        Option \"HorizTwoFingerScroll\" \"on\"
+        Option \"FingerLow\" \"25\"
+        Option \"FingerHigh\" \"50\"
+        Option \"MaxTapTime\" \"125\"
+        Option \"VertScrollDelta\" \"-48\"
+        Option \"HorizScrollDelta\" \"-48\"
+EndSection")
 
 (operating-system
  (host-name "paranoidal")
@@ -86,7 +104,8 @@
                       "us,ru"
                       #:options '("ctrl:nocaps"
                                   "terminate:ctrl_alt_bksp"
-                                  "grp:rctrl_toggle"))))
+                                  "grp:rctrl_toggle")))
+                    (extra-config (list %additional-xorg-configuration)))
                    gdm-service-type)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
                   (remove (lambda (s) (or
