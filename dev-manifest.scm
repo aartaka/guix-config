@@ -10,6 +10,7 @@
              (gnu packages lisp)
              (gnu packages llvm)
              (gnu packages mono)
+             (gnu packages node)
              (gnu packages pkg-config)
              (gnu packages python)
              (gnu packages python-xyz)
