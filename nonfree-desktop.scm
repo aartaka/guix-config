@@ -107,6 +107,7 @@ EndSection")
                                   "grp:rctrl_toggle")))
                     (extra-config (list %additional-xorg-configuration)))
                    gdm-service-type)
+                  (screen-locker-service xlockmore "xlock")
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
                   (remove (lambda (s) (or
 				                       (eq? (service-kind s) ntp-service-type)
