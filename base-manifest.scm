@@ -22,5 +22,5 @@
    "gstreamer" "gst-libav" "gst-plugins-base" "gst-plugins-good"
    "gst-plugins-bad" "gst-plugins-ugly"
    ;; Useful everyday programs.
-   "ungoogled-chromium" "icecat" "libreoffice" "keepassxc" "rxvt-unicode"
+   "ungoogled-chromium" "firefox" "libreoffice" "keepassxc" "rxvt-unicode"
    "st" "vlc" "pavucontrol" "pamixer" "protonvpn-cli" "nyxt"))
