@@ -9,6 +9,7 @@
              (gnu packages jupyter)
              (gnu packages lisp)
              (gnu packages llvm)
+             (gnu packages m4)
              (gnu packages mono)
              (gnu packages node)
              (gnu packages pkg-config)
@@ -24,7 +25,7 @@
 (packages->manifest
  (list llvm clang clang-runtime clang-toolchain
        glibc gdb gcc-toolchain
-       gnu-make cmake pkg-config
+       gnu-make cmake pkg-config m4
        patchelf coreutils binutils elfutils
        node
        ;; .NET stack
