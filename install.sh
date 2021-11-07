@@ -8,7 +8,7 @@ cp -f xinitrc ~/.xinitrc
 mkdir -p ~/.gnupg
 cp -f gpg-agent-conf ~/.gnupg/gpg-agent.conf
 
-profile_names=("emacs" "dev" "gimp" "nyxt" "texlive")
+profile_names=("emacs" "dev" "gimp" "texlive")
 for NAME in ${profile_names[*]}; do
     echo "Installing $NAME profile..."
     mkdir -p "$HOME/.guix-extra-profiles/$NAME-profile/"
