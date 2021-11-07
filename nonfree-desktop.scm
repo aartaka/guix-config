@@ -2,11 +2,14 @@
              (gnu packages bash)
              (gnu packages certs)
              (gnu packages emacs)
-	         (gnu packages emacs-xyz)
 	         (gnu packages fonts)
+             (gnu packages lisp)
+             (gnu packages lisp-xyz)
              (gnu packages version-control)
+             (gnu packages suckless)
              (gnu packages xdisorg)
              (gnu packages xorg)
+             (gnu packages wm)
 
              (gnu services dbus)
              (gnu services desktop)
@@ -81,7 +84,7 @@ EndSection")
 
  (packages
   (cons*
-   nss-certs xinit xorg-server emacs emacs-exwm font-hack git %base-packages))
+   nss-certs xinit xorg-server sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git %base-packages))
 
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
@@ -107,7 +110,7 @@ EndSection")
                                   "grp:rctrl_toggle")))
                     (extra-config (list %additional-xorg-configuration)))
                    gdm-service-type)
-                  (screen-locker-service xlockmore "xlock")
+                  (screen-locker-service slock)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
                   (remove (lambda (s) (or
 				                       (eq? (service-kind s) ntp-service-type)
