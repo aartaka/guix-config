@@ -9,7 +9,7 @@
    "glibc-utf8-locales" "libfixposix"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
-   "xclip" "xdg-utils" "xrandr" "xgamma"
+   "xclip" "xdg-utils" "xrandr" "xgamma" "feh"
    ;; Bluetooth
    "bluez" "blueman"
    ;; Scripting and everyday programming.
