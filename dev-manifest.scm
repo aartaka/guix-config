@@ -23,18 +23,22 @@
              (guix packages))
 
 (packages->manifest
- (list llvm clang clang-runtime clang-toolchain
-       glibc gdb gcc-toolchain
-       gnu-make cmake pkg-config m4
-       patchelf coreutils binutils elfutils
-       node
-       ;; .NET stack
-       mono dotnet
-       ;; Python & Jupyter
-       python jupyter xeus
-       ;; Golang
-       go
-       ;; CL
-       ccl ecl
-       ;; Lisps that are not CL
-       racket))
+ (list
+  ;; C/C++
+  llvm clang clang-runtime clang-toolchain
+  glibc gdb gcc-toolchain
+  gnu-make cmake pkg-config m4
+  ;; Binaries
+  patchelf coreutils binutils elfutils
+  ;; JS
+  node
+  ;; .NET stack
+  mono dotnet
+  ;; Python & Jupyter
+  python jupyter xeus
+  ;; Golang
+  go
+  ;; CL
+  ccl ecl
+  ;; Lisps that are not CL
+  racket guile))
