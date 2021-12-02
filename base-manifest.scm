@@ -21,6 +21,8 @@
    ;; Nyxt media dependencies.
    "gstreamer" "gst-libav" "gst-plugins-base" "gst-plugins-good"
    "gst-plugins-bad" "gst-plugins-ugly"
+   ;; Dwarf Fortress
+   "dwarf-fortress"
    ;; Useful everyday programs.
    "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer"
    "protonvpn-cli" "nyxt" "ungoogled-chromium" "firefox"))
