@@ -41,4 +41,4 @@
   ;; CL
   ccl ecl
   ;; Lisps that are not CL
-  racket guile))
+  racket))
