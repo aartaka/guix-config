@@ -36,6 +36,7 @@
   mono dotnet
   ;; Python & Jupyter
   python jupyter xeus
+  python-flake8 python-black python-autopep8 python-jedi python-yapf
   ;; Golang
   go
   ;; CL
