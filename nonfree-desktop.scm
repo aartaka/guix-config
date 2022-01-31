@@ -6,6 +6,7 @@
              (gnu packages lisp)
              (gnu packages lisp-xyz)
              (gnu packages version-control)
+             (gnu packages package-management)
              (gnu packages suckless)
              (gnu packages xdisorg)
              (gnu packages xorg)
@@ -14,6 +15,7 @@
              (gnu services dbus)
              (gnu services desktop)
              (gnu services networking)
+             (gnu services nix)
              (gnu services web)
              (gnu services xorg)
              (gnu system nss)
@@ -84,7 +86,8 @@ EndSection")
 
  (packages
   (cons*
-   nss-certs xinit xorg-server sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git %base-packages))
+   nss-certs xinit xorg-server sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
+   %base-packages))
 
  (services (cons* (service tor-service-type)
                   (service openntpd-service-type)
@@ -96,6 +99,7 @@ EndSection")
                              (tailon-configuration-file
                               ;; 8080 is used for everything
                               (bind "localhost:8081")))))
+                  (service nix-service-type)
                   (pam-limits-service
                    (list
                     (pam-limits-entry "@realtime" 'both 'rtprio 99)
