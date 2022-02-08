@@ -5,8 +5,6 @@ GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
 
 cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
-mkdir -p ~/.gnupg
-cp -f gpg-agent-conf ~/.gnupg/gpg-agent.conf
 
 profile_names=("emacs" "dev" "gimp" "texlive" "nyxt")
 for NAME in ${profile_names[*]}; do
