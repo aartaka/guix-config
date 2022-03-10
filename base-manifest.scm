@@ -6,7 +6,7 @@
    "font-ibm-plex" "font-dejavu" "font-liberation"
    "font-abattis-cantarell" "font-wqy-microhei"
    ;; GuixSD essentials and other mandatory packages
-   "glibc-utf8-locales" "libfixposix"
+   "libfixposix"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
    "xclip" "xdg-utils" "xrandr" "xgamma" "feh"
