@@ -25,4 +25,4 @@
    "dwarf-fortress"
    ;; Useful everyday programs.
    "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer" "openvpn"
-   "nyxt" "ungoogled-chromium" "firefox"))
+   "nyxt" "ungoogled-chromium" "icecat"))
