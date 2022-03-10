@@ -14,6 +14,7 @@
 
              (gnu services dbus)
              (gnu services desktop)
+             (gnu services docker)
              (gnu services networking)
              (gnu services nix)
              (gnu services web)
@@ -90,6 +91,7 @@ EndSection")
    %base-packages))
 
  (services (cons* (service tor-service-type)
+                  (service docker-service-type)
                   (service openntpd-service-type)
                   (service connman-service-type)
                   (service bluetooth-service-type)
