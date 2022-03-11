@@ -1,7 +1,7 @@
 (use-modules (gnu packages))
 
 (specifications->manifest
- '("cl-alexandria" "cl-ppcre" "cl-slynk" "cl-bordeaux-threads"
+ '("cl-alexandria" "cl-ppcre" "cl-slynk" "cl-bordeaux-threads" "cl-cffi"
    ;; Fonts
    "font-ibm-plex" "font-dejavu" "font-liberation"
    "font-abattis-cantarell" "font-wqy-microhei"
