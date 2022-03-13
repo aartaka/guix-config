@@ -34,6 +34,8 @@
   node-lts
   ;; .NET stack
   mono dotnet
+  ;; JVM & Clojure
+  openjdk clojure leiningen
   ;; Python & Jupyter
   python jupyter xeus
   python-flake8 python-black python-autopep8 python-jedi python-yapf
