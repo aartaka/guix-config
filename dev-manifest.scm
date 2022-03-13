@@ -31,7 +31,7 @@
   ;; Binaries
   patchelf coreutils binutils elfutils
   ;; JS
-  node
+  node-lts
   ;; .NET stack
   mono dotnet
   ;; Python & Jupyter
