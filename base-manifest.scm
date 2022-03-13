@@ -9,7 +9,7 @@
    "libfixposix"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
-   "xclip" "xdg-utils" "xrandr" "xgamma" "feh"
+   "xclip" "xdg-utils" "xrandr" "xgamma" "feh" "pulseaudio" "pamixer"
    ;; Bluetooth
    "bluez" "blueman"
    ;; Scripting and everyday programming.
