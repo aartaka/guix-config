@@ -1,11 +1,13 @@
 (use-modules (gnu packages)
              (gnu packages base)
+             (gnu packages clojure)
 	         (gnu packages cmake)
              (gnu packages commencement)
              (gnu packages elf)
              (gnu packages golang)
              (gnu packages gdb)
              (gnu packages guile)
+             (gnu packages java)
              (gnu packages jupyter)
              (gnu packages lisp)
              (gnu packages llvm)
@@ -19,6 +21,7 @@
              (gnu packages scheme)
 
              (nongnu packages dotnet)
+             (nongnu packages clojure)
 
              (guix packages))
 
@@ -35,7 +38,7 @@
   ;; .NET stack
   mono dotnet
   ;; JVM & Clojure
-  openjdk clojure leiningen
+  icedtea-8 clojure leiningen
   ;; Python & Jupyter
   python jupyter xeus
   python-flake8 python-black python-autopep8 python-jedi python-yapf
