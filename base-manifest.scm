@@ -24,5 +24,6 @@
    ;; Dwarf Fortress
    "dwarf-fortress"
    ;; Useful everyday programs.
-   "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer" "openvpn"
+   "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer"
+   "openvpn" "electrum"
    "nyxt" "ungoogled-chromium" "icecat"))
