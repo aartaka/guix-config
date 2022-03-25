@@ -38,7 +38,7 @@
   ;; .NET stack
   mono dotnet
   ;; JVM & Clojure
-  icedtea-8 clojure leiningen
+  icedtea-8 clojure clojure-tools leiningen
   ;; Python & Jupyter
   python jupyter xeus
   python-flake8 python-black python-autopep8 python-jedi python-yapf
