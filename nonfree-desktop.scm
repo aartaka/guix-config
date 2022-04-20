@@ -29,21 +29,21 @@
              (srfi srfi-1))
 
 (define %additional-xorg-configuration
-   "Section \"InputClass\"
-    Identifier \"touchpad\"
-    Driver \"synaptics\"
-    MatchIsTouchpad \"on\"
-        Option \"TapButton1\" \"1\"
-        Option \"TapButton2\" \"3\"
-        Option \"TapButton3\" \"2\"
-        Option \"VertTwoFingerScroll\" \"on\"
-        Option \"HorizTwoFingerScroll\" \"on\"
-        Option \"FingerLow\" \"25\"
-        Option \"FingerHigh\" \"50\"
-        Option \"MaxTapTime\" \"125\"
-        Option \"VertScrollDelta\" \"-48\"
-        Option \"HorizScrollDelta\" \"-48\"
-EndSection")
+  "Section \"InputClass\"
+   Identifier \"Touchpads\"
+   Driver \"libinput\"
+   MatchDevicePath \"/dev/input/event*\"
+   MatchIsTouchpad \"on\"
+
+   Option \"DisableWhileTyping\" \"on\"
+   Option \"MiddleEmulation\" \"on\"
+   Option \"ClickMethod\" \"clickfinger\"
+   Option \"Tapping\" \"on\"
+   Option \"TappingButtonMap\" \"lrm\"
+   Option \"TappingDrag\" \"on\"
+   Option \"ScrollMethod\" \"twofinger\"
+   Option \"NaturalScrolling\" \"true\"
+  EndSection")
 
 (operating-system
  (host-name "paranoidal")
@@ -108,6 +108,8 @@ EndSection")
                     (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
                   (set-xorg-configuration
                    (xorg-configuration
+                    (modules (remove (lambda (m) (eq? m xf86-input-synaptics))
+                                     %default-xorg-modules))
                     (keyboard-layout
                      (keyboard-layout
                       "us,ru"
