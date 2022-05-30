@@ -108,8 +108,10 @@
                     (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
                   (set-xorg-configuration
                    (xorg-configuration
-                    (modules (remove (lambda (m) (eq? m xf86-input-synaptics))
-                                     %default-xorg-modules))
+                    (modules
+                     (cons xf86-input-wacom
+                           (remove (lambda (m) (eq? m xf86-input-synaptics))
+                                   %default-xorg-modules)))
                     (keyboard-layout
                      (keyboard-layout
                       "us,ru"
