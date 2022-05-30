@@ -6,7 +6,7 @@ GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
 cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
 
-profile_names=("emacs" "dev" "gimp" "texlive" "nyxt")
+profile_names=("emacs" "dev" "gimp" "sc" "texlive" "nyxt")
 for NAME in ${profile_names[*]}; do
     echo "Installing $NAME profile..."
     mkdir -p "$HOME/.guix-extra-profiles/$NAME-profile/"
