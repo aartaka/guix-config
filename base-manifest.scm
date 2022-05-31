@@ -22,7 +22,7 @@
    "gstreamer" "gst-libav" "gst-plugins-base" "gst-plugins-good"
    "gst-plugins-bad" "gst-plugins-ugly"
    ;; Games
-   "dwarf-fortress" "ioquake3"
+   "dwarf-fortress" "ioquake3" "openmw"
    ;; Useful everyday programs.
    "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer"
    "openvpn" "electrum" "mu" "offlineimap3"
