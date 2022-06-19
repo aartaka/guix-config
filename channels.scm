@@ -9,6 +9,6 @@
   (name 'aartaka)
   (url "https://github.com/aartaka/guix-channel"))
  (channel
-  (name 'guix-gaming-games)
+  (name 'games)
   (url "https://gitlab.com/guix-gaming-channels/games"))
  %default-channels)
