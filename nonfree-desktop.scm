@@ -50,6 +50,11 @@
  (timezone "Asia/Yekaterinburg")
 
  (kernel linux)                       ; NON-FREE
+ (kernel-arguments
+  (cons* "i915.i915_enable_fbc=1"
+         "i915.i915_enable_fbc=1"
+         "i915.lvds_downclock=1"
+         %default-kernel-arguments))
  (initrd microcode-initrd)            ; NON-FREE
  (firmware (cons* iwlwifi-firmware     ; NON-FREE
                   sof-firmware
