@@ -47,7 +47,7 @@
 
 (operating-system
  (host-name "paranoidal")
- (timezone "Asia/Yekaterinburg")
+ (timezone "Asia/Yerevan")
 
  (kernel linux)                       ; NON-FREE
  (kernel-arguments
