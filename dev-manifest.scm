@@ -19,6 +19,7 @@
              (gnu packages python-xyz)
              (gnu packages racket)
              (gnu packages scheme)
+             (gnu packages ssh)
 
              (nongnu packages dotnet)
              (nongnu packages clojure)
@@ -27,6 +28,7 @@
 
 (packages->manifest
  (list
+  openssh
   ;; C/C++
   llvm clang clang-runtime clang-toolchain
   glibc gdb gcc-toolchain
