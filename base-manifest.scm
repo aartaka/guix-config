@@ -4,7 +4,7 @@
  '("cl-alexandria" "cl-ppcre" "cl-slynk" "cl-bordeaux-threads" "cl-cffi"
    ;; Fonts
    "font-ibm-plex" "font-dejavu" "font-liberation"
-   "font-abattis-cantarell" "font-wqy-microhei"
+   "font-abattis-cantarell" "font-wqy-microhei" "font-hack"
    ;; GuixSD essentials and other mandatory packages
    "libfixposix"
    ;; Xorg utilities
