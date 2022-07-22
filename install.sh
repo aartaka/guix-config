@@ -14,3 +14,5 @@ for NAME in ${profile_names[*]}; do
 done
 
 guix package -m "base-manifest.scm"
+
+guix package -f "$HOME/git/nyxt/build-scripts/nyxt.scm "
