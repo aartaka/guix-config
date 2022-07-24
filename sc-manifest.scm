@@ -8,4 +8,4 @@
   ;; SuperCollider (broken)
   jack-1 supercollider emacs-scel
   ;; PureData
-  pd))
+  pd libpd))
