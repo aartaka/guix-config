@@ -15,4 +15,4 @@ done
 
 guix package -m "base-manifest.scm"
 
-guix package -f "$HOME/git/nyxt/build-scripts/nyxt.scm "
+guix package -f "$HOME/git/nyxt/build-scripts/nyxt.scm"
