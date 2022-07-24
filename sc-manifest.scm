@@ -5,7 +5,9 @@
 
 (packages->manifest
  (list
+  ;; Audio infrastructure
+  jack-1 alsa-lib
   ;; SuperCollider (broken)
-  jack-1 supercollider emacs-scel
+  supercollider emacs-scel
   ;; PureData
   pd libpd))
