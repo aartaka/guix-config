@@ -18,9 +18,6 @@
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils"
    "gnupg" "pinentry" "emacs-pinentry" "perl" "stapler"
    "unrar" ; NON-FREE
-   ;; Nyxt media dependencies.
-   "gstreamer" "gst-libav" "gst-plugins-base" "gst-plugins-good"
-   "gst-plugins-bad" "gst-plugins-ugly"
    ;; Games
    "dwarf-fortress" "ioquake3" "openmw"
    ;; Useful everyday programs.
