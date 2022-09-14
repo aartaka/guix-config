@@ -22,5 +22,5 @@
    "dwarf-fortress" "ioquake3" "openmw"
    ;; Useful everyday programs.
    "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer"
-   "openvpn" "electrum" "mu" "offlineimap3"
+   "openvpn" "electrum"
    "ungoogled-chromium" "icecat" "openssh"))

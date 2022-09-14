@@ -8,6 +8,7 @@
              (gnu packages imagemagick)
              (gnu packages libreoffice)
              (gnu packages lisp-xyz)
+             (gnu packages mail)
              (gnu packages pdf)
              (gnu packages python-xyz)
              (gnu packages rust-apps)
@@ -21,8 +22,10 @@
 
 (packages->manifest
  (list emacs
-       emacspeak espeak-ng
-       emacs-telega emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
+       ;; emacspeak espeak-ng
+       ;; emacs-telega
+       emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
+       mu offlineimap3
        curl ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
        aspell aspell-dict-ru aspell-dict-en
        wordnet
