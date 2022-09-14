@@ -1,5 +1,6 @@
 (use-modules (gnu packages)
              (gnu packages audio)
+             (gnu packages linux)
              (gnu packages music)
              (gnu packages emacs-xyz))
 
