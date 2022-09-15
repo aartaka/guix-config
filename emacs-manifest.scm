@@ -23,6 +23,7 @@
 (packages->manifest
  (list emacs
        emacs-use-package
+       emacs-magit
        ;; emacspeak espeak-ng
        ;; emacs-telega
        emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
