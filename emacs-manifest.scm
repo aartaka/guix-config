@@ -22,6 +22,7 @@
 
 (packages->manifest
  (list emacs
+       emacs-use-package
        ;; emacspeak espeak-ng
        ;; emacs-telega
        emacs-pinentry emacs-pdf-tools emacs-sly cl-slynk
