@@ -12,7 +12,6 @@
              (gnu packages lisp)
              (gnu packages llvm)
              (gnu packages m4)
-             (gnu packages mono)
              (gnu packages node)
              (gnu packages pkg-config)
              (gnu packages python)
@@ -23,6 +22,8 @@
 
              (nongnu packages dotnet)
              (nongnu packages clojure)
+
+             (games packages mono)
 
              (guix packages))
 
