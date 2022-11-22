@@ -19,6 +19,8 @@ for NAME in ${profile_names[*]}; do
     guix package -m "$NAME-manifest.scm" --profile="$HOME/.guix-extra-profiles/$NAME-profile/$NAME-profile"
 done
 
-guix package -m "base-manifest.scm"
-
-guix package -f "$HOME/git/nyxt/build-scripts/nyxt.scm"
+if [ $# -eq 0 ];
+then
+    guix package -m "base-manifest.scm"
+    guix package -f "$HOME/git/nyxt/build-scripts/nyxt.scm"
+fi
