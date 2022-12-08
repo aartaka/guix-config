@@ -7,7 +7,7 @@
 (packages->manifest
  (list
   ;; Audio infrastructure
-  jack-1 alsa-lib
+  jack-1 alsa-lib sdl2
   ;; SuperCollider (broken)
   supercollider emacs-scel
   ;; PureData
