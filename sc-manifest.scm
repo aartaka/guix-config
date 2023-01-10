@@ -2,7 +2,8 @@
              (gnu packages audio)
              (gnu packages linux)
              (gnu packages music)
-             (gnu packages emacs-xyz))
+             (gnu packages emacs-xyz)
+             (gnu packages sdl))
 
 (packages->manifest
  (list
