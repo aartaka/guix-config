@@ -5,6 +5,7 @@
    ;; Fonts
    "font-ibm-plex" "font-dejavu" "font-liberation"
    "font-abattis-cantarell" "font-wqy-microhei" "font-hack"
+   "font-gnu-unifont"
    ;; GuixSD essentials and other mandatory packages
    "libfixposix"
    ;; Xorg utilities
