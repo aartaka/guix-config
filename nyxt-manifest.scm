@@ -1,12 +1,27 @@
 (use-modules (guix packages)
-             (srfi srfi-1))
+             (srfi srfi-1)
+             (gnu packages aspell)
+             (gnu packages base)
+             (gnu packages commencement)
+             (gnu packages glib)
+             (gnu packages lisp)
+             (gnu packages lisp-check)
+             (gnu packages lisp-xyz)
+             (gnu packages gnome)
+             (gnu packages gnupg)
+             (gnu packages gstreamer)
+             (gnu packages gtk)
+             (gnu packages pkg-config)
+             (gnu packages version-control)
+             (gnu packages webkit))
 
-(specifications->manifest
+(packages->manifest
  (append
-  (map (compose package-name second)
+  (map second
        (package-inputs
         (load (string-append (getenv "HOME") "/git/nyxt/build-scripts/nyxt.scm"))))
-  (map (compose package-name second)
+  (map second
        (package-native-inputs
         (load (string-append (getenv "HOME") "/git/nyxt/build-scripts/nyxt.scm"))))
-  (list "cl-osicat" "cl-markup")))
+  (list cl-osicat cl-markup
+        (load (string-append (getenv "HOME") "/git/nyxt/build-scripts/nyxt.scm")))))
