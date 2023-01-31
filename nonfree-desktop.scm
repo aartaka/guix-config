@@ -75,7 +75,9 @@
                                                     body))))
                                 (_ phase)))
                             (cddadr (find-tail (lambda (arg) (eq? #:phases arg))
-                                               (package-arguments sbcl)))))))))
+                                               (package-arguments sbcl)))))
+      ,@(cddr (find-tail (lambda (arg) (eq? #:phases arg))
+                         (package-arguments sbcl)))))))
 
 (operating-system
  (host-name "paranoidal")
