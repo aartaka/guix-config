@@ -23,10 +23,14 @@
 
              (guix gexp)
              (guix packages)
+             (guix utils)
 
              (nongnu packages linux)        ; NON-FREE
              (nongnu system linux-initrd)   ; NON-FREE
-             (srfi srfi-1))
+
+             (srfi srfi-1)
+
+             (ice-9 match))
 
 (define %additional-xorg-configuration
   "Section \"InputClass\"
@@ -45,17 +49,43 @@
    Option \"NaturalScrolling\" \"true\"
   EndSection")
 
+(define custom-sbcl
+  (package
+   (inherit sbcl)
+   (arguments
+    `(#:phases
+      (modify-phases %standard-phases
+                     ,@(map (lambda (phase)
+                              (match phase
+                                (('replace ''build ((or 'lambda 'lambda*) args . body))
+                                 `(replace 'build
+                                           (lambda* ,args
+                                             ,@(map (lambda (form)
+                                                      (match form
+                                                        (('invoke "sh" "make.sh" . args)
+                                                         `(invoke "sh" "make.sh"
+                                                                  ,@(append (remove (lambda (a)
+                                                                                      (and (string? a)
+                                                                                           (string-prefix? "--with" a)))
+                                                                                    args)
+                                                                            (list "--fancy" "--with-sb-simd"))))
+                                                        (_ form)))
+                                                    body))))
+                                (_ phase)))
+                            (cddadr (find-tail (lambda (arg) (eq? #:phases arg))
+                                               (package-arguments sbcl)))))))))
+
 (operating-system
  (host-name "paranoidal")
  (timezone "Asia/Yerevan")
 
- (kernel linux)                       ; NON-FREE
+ (kernel linux)                        ; NON-FREE
  (kernel-arguments
   (cons* "i915.i915_enable_fbc=1"
          "i915.i915_enable_fbc=1"
          "i915.lvds_downclock=1"
          %default-kernel-arguments))
- (initrd microcode-initrd)            ; NON-FREE
+ (initrd microcode-initrd)             ; NON-FREE
  (firmware (cons* iwlwifi-firmware     ; NON-FREE
                   sof-firmware
                   %base-firmware))
@@ -92,7 +122,7 @@
 
  (packages
   (cons*
-   nss-certs xinit xorg-server sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
+   nss-certs xinit xorg-server custom-sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
    %base-packages))
 
  (services (cons* (service tor-service-type)
