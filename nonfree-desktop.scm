@@ -1,6 +1,7 @@
 (use-modules (gnu)
              (gnu packages bash)
              (gnu packages certs)
+             (gnu packages databases)
              (gnu packages emacs)
 	         (gnu packages fonts)
              (gnu packages lisp)
@@ -12,6 +13,7 @@
              (gnu packages xorg)
              (gnu packages wm)
 
+             (gnu services databases)
              (gnu services dbus)
              (gnu services desktop)
              (gnu services docker)
@@ -127,6 +129,9 @@
 
  (services (cons* (service tor-service-type)
                   (service docker-service-type)
+                  (service postgresql-service-type
+                           (postgresql-configuration
+                            (postgresql postgresql)))
                   (service openntpd-service-type)
                   (service connman-service-type)
                   (service bluetooth-service-type)
