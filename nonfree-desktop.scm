@@ -134,6 +134,16 @@
                   (service postgresql-service-type
                            (postgresql-configuration
                             (postgresql postgresql)))
+                 (service postgresql-role-service-type
+                           (postgresql-role-configuration
+                            (roles (list (postgresql-role
+                                          (name "aartaka")
+                                          (create-database? #t))
+                                         (postgresql-role
+                                          (name "postgres")
+                                          (permissions
+                                           '(bypassrls createdb createrole login replication superuser))
+                                          (create-database? #t))))))
                   (service openntpd-service-type)
                   (service connman-service-type)
                   (service bluetooth-service-type)
