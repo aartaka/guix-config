@@ -5,6 +5,8 @@ GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
 
 cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
+mkdir -p ~/.config/common-lisp/source-registry.conf.d/
+cp -f asdf.conf ~/.config/common-lisp/source-registry.conf.d/asdf.conf
 
 profile_names="$@"
 
