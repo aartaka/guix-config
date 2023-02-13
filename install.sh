@@ -7,6 +7,11 @@ cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
 mkdir -p ~/.config/common-lisp/source-registry.conf.d/
 cp -f asdf.conf ~/.config/common-lisp/source-registry.conf.d/asdf.conf
+if [ -f nonguix-signing-key.pub ];
+then
+   rm nonguix-signing-key.pub
+fi
+curl https://substitutes.nonguix.org/signing-key.pub > nonguix-signing-key.pub
 
 profile_names="$@"
 

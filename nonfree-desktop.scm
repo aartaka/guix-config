@@ -183,10 +183,18 @@ host	all	all	::1/128 	md5"))))))
                    gdm-service-type)
                   (screen-locker-service slock)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
-                  (remove (lambda (s) (or
-				                       (eq? (service-kind s) ntp-service-type)
-				                       (eq? (service-kind s) network-manager-service-type)))
-                          %desktop-services)))
+                  (modify-services %desktop-services
+                    (delete network-manager-service-type)
+                    (delete ntp-service-type)
+                    (guix-service-type
+                     config => (guix-configuration
+                                (inherit config)
+                                (substitute-urls
+                                 (append (list "https://substitutes.nonguix.org")
+                                         %default-substitute-urls))
+                                (authorized-keys
+                                 (append (list (local-file "./nonguix-signing-key.pub"))
+                                         %default-authorized-guix-keys)))))))
 
  ;; Allow resolution of '.local' host names with mDNS.
  (name-service-switch %mdns-host-lookup-nss))
