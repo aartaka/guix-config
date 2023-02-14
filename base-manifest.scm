@@ -20,7 +20,7 @@
    "gnupg" "pinentry" "emacs-pinentry" "perl" "stapler"
    "unrar" ; NON-FREE
    ;; Games
-   "dwarf-fortress" "ioquake3" "openmw"
+   "dwarf-fortress" "ioquake3" "openmw" "minetest"
    ;; Useful everyday programs.
    "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer"
    "openvpn" "electrum" "openssh"))
