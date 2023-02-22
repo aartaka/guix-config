@@ -193,7 +193,7 @@ host	all	all	::1/128 	md5"))))))
                                  (append (list "https://substitutes.nonguix.org")
                                          %default-substitute-urls))
                                 (authorized-keys
-                                 (append (list (local-file "./nonguix-signing-key.pub"))
+                                 (append (list (local-file "nonguix-signing-key.pub"))
                                          %default-authorized-guix-keys)))))))
 
  ;; Allow resolution of '.local' host names with mDNS.
