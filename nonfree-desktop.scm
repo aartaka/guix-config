@@ -19,6 +19,7 @@
              (gnu services docker)
              (gnu services networking)
              (gnu services nix)
+             (gnu services virtualization)
              (gnu services web)
              (gnu services xorg)
              (gnu system nss)
@@ -167,6 +168,8 @@ host	all	all	::1/128 	md5"))))))
                    (list
                     (pam-limits-entry "@realtime" 'both 'rtprio 99)
                     (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
+                  (service libvirt-service-type)
+                  (service virtlog-service-type)
                   (set-xorg-configuration
                    (xorg-configuration
                     (modules
