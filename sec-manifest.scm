@@ -1,4 +1,4 @@
 (use-modules (gnu packages))
 
 (specifications->manifest
- '("nmap" "netcat" "hashcat"))
+ '("nmap" "netcat" "hashcat" "gnome-boxes"))
