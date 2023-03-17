@@ -48,6 +48,6 @@
   ;; Golang
   go
   ;; CL
-  ccl ecl abcl gcl clasp clisp
+  ccl ecl abcl gcl clisp
   ;; Lisps that are not CL
   racket))
