@@ -23,5 +23,4 @@
    (map second
         (package-inputs
          (load (string-append (getenv "HOME") "/git/nyxt/build-scripts/nyxt.scm"))))
-   (list cl-osicat cl-markup
-         (load (string-append (getenv "HOME") "/git/nyxt/build-scripts/nyxt.scm"))))))
+   (list cl-osicat cl-markup))))
