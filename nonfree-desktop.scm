@@ -157,12 +157,6 @@ host	all	all	::1/128 	md5"))))))
                   (service openntpd-service-type)
                   (service connman-service-type)
                   (service bluetooth-service-type)
-                  (service tailon-service-type
-                           (tailon-configuration
-                            (config-file
-                             (tailon-configuration-file
-                              ;; 8080 is used for everything
-                              (bind "localhost:8081")))))
                   (service nix-service-type)
                   (pam-limits-service
                    (list
