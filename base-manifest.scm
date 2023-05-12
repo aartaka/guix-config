@@ -14,7 +14,7 @@
    ;; Bluetooth
    "bluez" "blueman"
    ;; Scripting and everyday programming.
-   "python" "ccl"
+   "python" "readline"
    ;; CLI utils and other necessary things.
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils"
    "gnupg" "pinentry" "emacs-pinentry" "perl" "stapler"
