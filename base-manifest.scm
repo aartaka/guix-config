@@ -13,8 +13,8 @@
    "xclip" "xdg-utils" "xrandr" "xgamma" "feh" "pulseaudio" "pamixer"
    ;; Bluetooth
    "bluez" "blueman"
-   ;; Scripting and everyday programming.
-   "python" "readline"
+   ;; Readline and shell helpers.
+   "readline" "rlwrap"
    ;; CLI utils and other necessary things.
    "p7zip" "dosfstools" "file" "tree" "zip" "unzip" "git" "sysfsutils"
    "gnupg" "pinentry" "emacs-pinentry" "perl" "stapler"
