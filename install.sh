@@ -5,7 +5,11 @@ GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
 
 cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
-mkdir -p ~/.config/common-lisp/source-registry.conf.d/
+cp -f lisp-config.lisp ~/.sbclrc
+cp -f lisp-config.lisp ~/.ccl-init.lisp
+cp -f lisp-config.lisp ~/.eclrc
+cp -f lisp-config.lisp ~/.clisprc.lisp
+cp -f lisp-config.lisp ~/.abclrc
 
 profile_names="$@"
 
