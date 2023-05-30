@@ -21,6 +21,7 @@
              (gnu packages ssh)
 
              (nongnu packages clojure)
+             (nongnu packages lisp)
 
              (guix packages))
 
@@ -43,6 +44,6 @@
   ;; Golang
   go
   ;; CL
-  ccl ecl abcl gcl clisp
+  ccl ecl abcl gcl clisp allegro-cl
   ;; Lisps that are not CL
   racket))
