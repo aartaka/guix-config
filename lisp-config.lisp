@@ -18,3 +18,4 @@
 (require "sb-introspect")
 
 ;; (declaim (optimize (safety 3) (debug 3)))
+;; (declaim (optimize speed))
