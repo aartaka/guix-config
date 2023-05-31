@@ -16,3 +16,5 @@
 (require "package-locks")
 #+sbcl
 (require "sb-introspect")
+
+;; (declaim (optimize (safety 3) (debug 3)))
