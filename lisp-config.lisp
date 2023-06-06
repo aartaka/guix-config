@@ -19,3 +19,6 @@
 
 ;; (declaim (optimize (safety 3) (debug 3)))
 ;; (declaim (optimize speed))
+
+(setf *print-case* :downcase
+      *print-circle* nil)
