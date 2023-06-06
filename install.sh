@@ -2,14 +2,15 @@
 
 mkdir -p $HOME/.guix-extra-profiles
 GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
+LISP_CONFIG='(load #p"~/.config/guix/lisp-config.lisp")'
 
 cp -f bash-profile ~/.bash_profile
 cp -f xinitrc ~/.xinitrc
-cp -f lisp-config.lisp ~/.sbclrc
-cp -f lisp-config.lisp ~/.ccl-init.lisp
-cp -f lisp-config.lisp ~/.eclrc
-cp -f lisp-config.lisp ~/.clisprc.lisp
-cp -f lisp-config.lisp ~/.abclrc
+echo "$LISP_CONFIG" > ~/.sbclrc
+echo "$LISP_CONFIG" > ~/.ccl-init.lisp
+echo "$LISP_CONFIG" > ~/.eclrc
+echo "$LISP_CONFIG" > ~/.clisprc.lisp
+echo "$LISP_CONFIG" > ~/.abclrc
 
 profile_names="$@"
 
