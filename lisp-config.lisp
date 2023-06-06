@@ -7,9 +7,8 @@
 
 (require "asdf")
 #-ecl
-(require "cffi")
-#-ecl
 (progn
+  (require "cffi")
   (push #p"~/.guix-extra-profiles/nyxt-profile/nyxt-profile/lib/" cffi:*foreign-library-directories*)
   (push #p"~/.guix-profile/lib/" cffi:*foreign-library-directories*))
 #+ecl
