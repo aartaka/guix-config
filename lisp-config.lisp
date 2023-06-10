@@ -6,9 +6,9 @@
     (load quicklisp-init)))
 
 (require "asdf")
-#-ecl
+#-(or ecl abcl)
 (require "cffi")
-#-ecl
+#-(or ecl abcl)
 (progn
   (push #p"~/.guix-extra-profiles/nyxt-profile/nyxt-profile/lib/" cffi:*foreign-library-directories*)
   (push #p"~/.guix-profile/lib/" cffi:*foreign-library-directories*))
@@ -17,8 +17,10 @@
 #+sbcl
 (require "sb-introspect")
 
-;; (declaim (optimize (safety 3) (debug 3)))
+(declaim (optimize (safety 3) (debug 3)))
 ;; (declaim (optimize speed))
 
-(setf *print-case* :downcase
+;;; *print-case* :downcase breaks some symbol-generation. Any way to
+;;; fix it?
+(setf ;; *print-case* :downcase
       *print-circle* nil)
