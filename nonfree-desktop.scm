@@ -164,6 +164,9 @@ host	all	all	::1/128 	md5"))))))
                     (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
                   (service libvirt-service-type)
                   (service virtlog-service-type)
+                  (service qemu-binfmt-service-type
+                           (qemu-binfmt-configuration
+                            (platforms (lookup-qemu-platforms "arm" "aarch64"))))
                   (set-xorg-configuration
                    (xorg-configuration
                     (modules
