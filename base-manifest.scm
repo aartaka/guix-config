@@ -6,6 +6,7 @@
    "font-ibm-plex" "font-dejavu" "font-liberation"
    "font-abattis-cantarell" "font-wqy-microhei" "font-hack"
    "font-gnu-unifont"
+   "font-google-material-design-icons"
    ;; GuixSD essentials and other mandatory packages
    "libfixposix"
    ;; Xorg utilities
