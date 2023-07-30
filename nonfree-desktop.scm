@@ -2,8 +2,10 @@
              (gnu packages bash)
              (gnu packages certs)
              (gnu packages databases)
+             (gnu packages display-managers)
              (gnu packages emacs)
 	         (gnu packages fonts)
+             (gnu packages gnome)
              (gnu packages lisp)
              (gnu packages lisp-xyz)
              (gnu packages version-control)
@@ -19,17 +21,19 @@
              (gnu services docker)
              (gnu services networking)
              (gnu services nix)
+             (gnu services sddm)
              (gnu services virtualization)
              (gnu services web)
              (gnu services xorg)
+
              (gnu system nss)
 
              (guix gexp)
              (guix packages)
              (guix utils)
 
-             (nongnu packages linux)        ; NON-FREE
-             (nongnu system linux-initrd)   ; NON-FREE
+             (nongnu packages linux)      ;; NON-FREE
+             (nongnu system linux-initrd) ;; NON-FREE
 
              (srfi srfi-1)
 
@@ -108,26 +112,26 @@
 
  (file-systems (append
                 (list (file-system
-		               (device (file-system-label "CRYPTROOT"))
-		               (mount-point "/")
-		               (type "btrfs")
-		               (dependencies mapped-devices))
+                       (device (file-system-label "CRYPTROOT"))
+                       (mount-point "/")
+                       (type "btrfs")
+                       (dependencies mapped-devices))
                       (file-system
-		               (device (file-system-label "ESP"))
-		               (mount-point "/boot/efi")
-		               (type "vfat")))
+                       (device (file-system-label "ESP"))
+                       (mount-point "/boot/efi")
+                       (type "vfat")))
                 %base-file-systems))
 
  (users (cons (user-account
-	           (name "aartaka")
-	           (comment "Artyom Bologov")
-	           (group "users")
-	           (supplementary-groups '("wheel" "netdev" "audio" "video" "input" "lp")))
+               (name "aartaka")
+               (comment "Artyom Bologov")
+               (group "users")
+               (supplementary-groups '("wheel" "netdev" "audio" "video" "input" "lp")))
               %base-user-accounts))
 
  (packages
   (cons*
-   nss-certs xinit xorg-server custom-sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
+   nss-certs xinit xorg-server orca sugar-dark-sddm-theme custom-sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
    %base-packages))
 
  (services (cons* (service tor-service-type)
@@ -144,7 +148,7 @@
 local	all	all			trust
 host	all	all	127.0.0.1/32 	md5
 host	all	all	::1/128 	md5"))))))
-                 (service postgresql-role-service-type
+                  (service postgresql-role-service-type
                            (postgresql-role-configuration
                             (roles (list (postgresql-role
                                           (name "aartaka")
@@ -155,7 +159,6 @@ host	all	all	::1/128 	md5"))))))
                                            '(bypassrls createdb createrole login replication superuser))
                                           (create-database? #t))))))
                   (service openntpd-service-type)
-                  (service connman-service-type)
                   (service bluetooth-service-type)
                   (service nix-service-type)
                   (pam-limits-service
@@ -167,34 +170,39 @@ host	all	all	::1/128 	md5"))))))
                   (service qemu-binfmt-service-type
                            (qemu-binfmt-configuration
                             (platforms (lookup-qemu-platforms "arm" "aarch64"))))
-                  (set-xorg-configuration
-                   (xorg-configuration
-                    (modules
-                     (cons xf86-input-wacom
-                           (remove (lambda (m) (eq? m xf86-input-synaptics))
-                                   %default-xorg-modules)))
-                    (keyboard-layout
-                     (keyboard-layout
-                      "us,ru"
-                      #:options '("ctrl:nocaps"
-                                  "terminate:ctrl_alt_bksp"
-                                  "grp:rctrl_toggle")))
-                    (extra-config (list %additional-xorg-configuration)))
-                   gdm-service-type)
+                  (service gnome-desktop-service-type)
+                  (service mate-desktop-service-type)
+                  (service xfce-desktop-service-type)
+                  (service sddm-service-type
+                           (sddm-configuration
+                            (theme "sugar-dark")
+                            (xorg-configuration
+                             (xorg-configuration
+                              (modules
+                               (cons xf86-input-wacom
+                                     (remove (lambda (m) (eq? m xf86-input-synaptics))
+                                             %default-xorg-modules)))
+                              (keyboard-layout
+                               (keyboard-layout
+                                "us,ru"
+                                #:options '("ctrl:nocaps"
+                                            "terminate:ctrl_alt_bksp"
+                                            "grp:rctrl_toggle")))
+                              (extra-config (list %additional-xorg-configuration))))))
                   (screen-locker-service slock)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
                   (modify-services %desktop-services
-                    (delete network-manager-service-type)
-                    (delete ntp-service-type)
-                    (guix-service-type
-                     config => (guix-configuration
-                                (inherit config)
-                                (substitute-urls
-                                 (append (list "https://substitutes.nonguix.org")
-                                         %default-substitute-urls))
-                                (authorized-keys
-                                 (append (list (local-file "nonguix-signing-key.pub"))
-                                         %default-authorized-guix-keys)))))))
+                                   (delete ntp-service-type)
+                                   (delete gdm-service-type)
+                                   (guix-service-type
+                                    config => (guix-configuration
+                                               (inherit config)
+                                               (substitute-urls
+                                                (append (list "https://substitutes.nonguix.org")
+                                                        %default-substitute-urls))
+                                               (authorized-keys
+                                                (append (list (local-file "nonguix-signing-key.pub"))
+                                                        %default-authorized-guix-keys)))))))
 
  ;; Allow resolution of '.local' host names with mDNS.
  (name-service-switch %mdns-host-lookup-nss))
