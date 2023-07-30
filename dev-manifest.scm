@@ -9,6 +9,7 @@
              (gnu packages guile)
              (gnu packages java)
              (gnu packages jupyter)
+             (gnu packages libffi)
              (gnu packages lisp)
              (gnu packages llvm)
              (gnu packages m4)
@@ -44,6 +45,7 @@
   ;; Golang
   go
   ;; CL
+  libffi ;; For ECL
   ccl ecl abcl gcl clisp allegro-cl
   ;; Lisps that are not CL
   racket))
