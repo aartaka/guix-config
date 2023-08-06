@@ -17,10 +17,9 @@
 #+sbcl
 (require "sb-introspect")
 
-(declaim (optimize (safety 3) (debug 3)))
 ;; (declaim (optimize speed))
+(declaim (optimize (safety 3) (debug 3)))
 
-;;; *print-case* :downcase breaks some symbol-generation. Any way to
-;;; fix it?
+;;; FIXME: *print-case* :downcase breaks some symbol-generation.
 (setf ;; *print-case* :downcase
       *print-circle* nil)
