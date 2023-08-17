@@ -22,6 +22,29 @@
 ;; (declaim (optimize speed))
 (declaim (optimize (safety 3) (debug 3)))
 
+(progn
+  (push #p"~/git/trivial-gray-streams/" asdf:*central-registry*)
+  (push #p"~/git/closer-mop/" asdf:*central-registry*)
+  (push #p"~/git/graven-image/" asdf:*central-registry*))
+(asdf:load-system :graven-image)
+(use-package :graven-image)
+
+(defmacro defmethod-with-better-print (name arglist)
+  `(defmethod ,name :around (,@arglist)
+     (declare (ignore ,@(loop for a in arglist
+                              unless (member a lambda-list-keywords)
+                                collect a)))
+     (let ((*print-case* :downcase)
+           (*print-level* 2)
+           (*print-length* 7))
+       (call-next-method))))
+
+(defmethod-with-better-print
+    gimage:apropos* (string &optional package external-only docs-too))
+(defmethod-with-better-print
+    gimage:describe* (object &optional stream ignore-methods))
+(defmethod-with-better-print gimage:inspect* (object))
+
 ;;; FIXME: *print-case* :downcase breaks some symbol-generation.
 (setf ;; *print-case* :downcase
       *print-circle* nil)
