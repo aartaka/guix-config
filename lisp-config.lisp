@@ -7,11 +7,13 @@
 
 (require "asdf")
 #-(or ecl abcl)
-(require "cffi")
+(ignore-errors (ql:quickload "cffi"))
 #-(or ecl abcl)
-(progn
-  (push #p"~/.guix-extra-profiles/nyxt-profile/nyxt-profile/lib/" cffi:*foreign-library-directories*)
-  (push #p"~/.guix-profile/lib/" cffi:*foreign-library-directories*))
+(when (find-package "CFFI")
+  (push #p"~/.guix-extra-profiles/nyxt-profile/nyxt-profile/lib/"
+        (symbol-value (find-symbol "*FOREIGN-LIBRARY-DIRECTORIES*" :CFFI)))
+  (push #p"~/.guix-profile/lib/"
+        (symbol-value (find-symbol "*FOREIGN-LIBRARY-DIRECTORIES*" :CFFI))))
 #+ecl
 (require "package-locks")
 #+sbcl
