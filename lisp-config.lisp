@@ -22,12 +22,12 @@
 ;; (declaim (optimize speed))
 (declaim (optimize (safety 3) (debug 3)))
 
-(progn
-  (push #p"~/git/trivial-gray-streams/" asdf:*central-registry*)
-  (push #p"~/git/closer-mop/" asdf:*central-registry*)
-  (push #p"~/git/graven-image/" asdf:*central-registry*))
-(asdf:load-system :graven-image)
-(use-package :graven-image)
+;; (progn
+;;   (push #p"~/git/trivial-gray-streams/" asdf:*central-registry*)
+;;   (push #p"~/git/closer-mop/" asdf:*central-registry*)
+;;   (push #p"~/git/graven-image/" asdf:*central-registry*))
+;; (asdf:load-system :graven-image)
+;; (use-package :graven-image)
 
 ;;; FIXME: *print-case* :downcase breaks some symbol-generation.
 (setf ;; *print-case* :downcase
