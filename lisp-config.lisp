@@ -28,4 +28,6 @@
 
 ;;; FIXME: *print-case* :downcase breaks some symbol-generation.
 (setf ;; *print-case* :downcase
-      *print-circle* nil)
+      *print-circle* nil
+      *print-right-margin* (or (parse-integer (uiop:getenv "COLUMNS") :junk-allowed t)
+                               100))
