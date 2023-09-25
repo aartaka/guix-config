@@ -40,6 +40,7 @@
        emacs-magit
        ;; Helm
        emacs-projectile emacs-helm-projectile emacs-helm-ag emacs-helm-swoop
+       emacs-flycheck emacs-helm-flycheck
        ;; Org Mode
        emacs-ox-gemini emacs-ox-pandoc pandoc emacs-org-ref
        emacs-markdown-mode emacs-edit-indirect
@@ -52,12 +53,11 @@
        emacs-sly-named-readtables emacs-sly-macrostep emacs-sly-asdf
        emacs-helm-sly emacs-helm-xref
        emacs-geiser emacs-geiser-racket emacs-geiser-guile emacs-racket-mode
-       emacs-paredit emacs-tagedit
+       emacs-paredit
+       ;; emacs-tagedit
        emacs-parseclj emacs-parseedn emacs-cider
        ;; C/C++
        emacs-nhexl-mode emacs-go-mode
-       ;; Python
-       emacs-elpy emacs-flycheck emacs-helm-flycheck
        ;; Web (HTML/CSS/JS)
        emacs-web-mode emacs-js2-mode emacs-rjsx-mode emacs-skewer-mode emacs-rainbow-mode
        emacs-smart-mode-line
