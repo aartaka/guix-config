@@ -2,6 +2,7 @@
              (gnu packages compression)
              (gnu packages fonts)
              (gnu packages tex)
+             (gnu packages texlive)
 
              (guix packages))
 
