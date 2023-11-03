@@ -187,7 +187,8 @@ host	all	all	::1/128 	md5"))))))
                                 "us,ru"
                                 #:options '("ctrl:nocaps"
                                             "terminate:ctrl_alt_bksp"
-                                            "grp:rctrl_toggle")))
+                                            "grp:rctrl_toggle"
+                                            "grp:shifts_toggle")))
                               (extra-config (list %additional-xorg-configuration))))))
                   (screen-locker-service slock)
                   (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
