@@ -1,7 +1,7 @@
 (use-modules (gnu packages)
              (gnu packages base)
              (gnu packages clojure)
-	         (gnu packages cmake)
+	     (gnu packages cmake)
              (gnu packages commencement)
              (gnu packages elf)
              (gnu packages golang)
@@ -12,6 +12,7 @@
              (gnu packages libffi)
              (gnu packages lisp)
              (gnu packages llvm)
+             (gnu packages lua)
              (gnu packages m4)
              (gnu packages node)
              (gnu packages pkg-config)
@@ -35,17 +36,12 @@
   gnu-make cmake pkg-config m4
   ;; Binaries
   patchelf coreutils binutils elfutils
-  ;; JS
-  node-lts
   ;; JVM & Clojure
   icedtea clojure clojure-tools leiningen
-  ;; Python & Jupyter
-  python jupyter
-  python-flake8 python-black python-autopep8 python-jedi python-yapf
-  ;; Golang
-  go
   ;; CL
   libffi ;; For ECL
   ccl ecl abcl gcl clisp allegro-cl
   ;; Lisps that are not CL
-  racket))
+  racket
+  ;; Other
+  lua go python jupyter node-lts))
