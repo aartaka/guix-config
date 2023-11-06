@@ -1,11 +1,5 @@
 (cons*
  (channel
-  (name 'chur)
-  (url "https://github.com/aartaka/chur-guix"))
- (channel
-  (name 'aartaka)
-  (url "https://github.com/aartaka/guix-channel"))
- (channel
   (name 'guixrus)
   (url "https://git.sr.ht/~whereiseveryone/guixrus")
   (introduction
