@@ -44,7 +44,8 @@
        ;; Org Mode
        emacs-ox-gemini emacs-ox-pandoc pandoc emacs-org-ref
        emacs-markdown-mode emacs-edit-indirect
-       ;; emacspeak espeak-ng
+       ;; emacspeak
+       espeak-ng
        emacs-telega
        emacs-pinentry
        ;; Lisps
