@@ -38,12 +38,15 @@
        emacs-nov-el emacs-pdf-tools
        emacs-erc-image
        emacs-magit
+       emacs-ein
        ;; Helm
        emacs-projectile emacs-helm-projectile emacs-helm-ag emacs-helm-swoop
        emacs-flycheck emacs-helm-flycheck
-       ;; Org Mode
-       emacs-ox-gemini emacs-ox-pandoc pandoc emacs-org-ref
-       emacs-markdown-mode emacs-edit-indirect
+       ;; Org Mode and writing
+       emacs-ox-gemini emacs-ox-pandoc pandoc emacs-org-ref emacs-org-make-toc
+       emacs-ox-gfm emacs-ox-twbs
+       emacs-markdown-mode emacs-gemini-mode emacs-edit-indirect
+       emacs-writegood-mode
        ;; emacspeak
        espeak-ng
        emacs-telega
@@ -54,9 +57,8 @@
        emacs-sly-named-readtables emacs-sly-macrostep emacs-sly-asdf
        emacs-helm-sly emacs-helm-xref
        emacs-geiser emacs-geiser-racket emacs-geiser-guile emacs-racket-mode
-       emacs-paredit
-       ;; emacs-tagedit
-       emacs-parseclj emacs-parseedn emacs-cider
+       emacs-paredit emacs-tagedit
+       emacs-clojure-mode emacs-parseclj emacs-parseedn emacs-cider
        ;; C/C++
        emacs-nhexl-mode emacs-go-mode
        ;; Web (HTML/CSS/JS)
