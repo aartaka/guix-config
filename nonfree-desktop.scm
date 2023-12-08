@@ -4,7 +4,7 @@
              (gnu packages databases)
              (gnu packages display-managers)
              (gnu packages emacs)
-	         (gnu packages fonts)
+             (gnu packages fonts)
              (gnu packages gnome)
              (gnu packages lisp)
              (gnu packages lisp-xyz)
