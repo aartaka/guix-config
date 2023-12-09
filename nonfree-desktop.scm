@@ -112,7 +112,7 @@
 
  (file-systems (append
                 (list (file-system
-                       (device (file-system-label "CRYPTROOT"))
+                       (device "/dev/mapper/cryptroot")
                        (mount-point "/")
                        (type "btrfs")
                        (dependencies mapped-devices))
