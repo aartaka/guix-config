@@ -19,7 +19,9 @@
 
              (guix packages)
 
-             (nongnu packages emacs))
+             (nongnu packages emacs)
+
+             (guixrus packages emacs))
 
 (packages->manifest
  (list emacs
