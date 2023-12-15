@@ -59,7 +59,8 @@
        emacs-sly-named-readtables emacs-sly-macrostep emacs-sly-asdf
        emacs-helm-sly emacs-helm-xref
        emacs-geiser emacs-geiser-racket emacs-geiser-guile emacs-racket-mode
-       emacs-paredit emacs-tagedit
+       emacs-paredit
+       ;; emacs-tagedit
        emacs-clojure-mode emacs-parseclj emacs-parseedn emacs-cider
        ;; C/C++
        emacs-nhexl-mode emacs-go-mode
