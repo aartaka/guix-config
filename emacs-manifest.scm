@@ -47,6 +47,7 @@
        ;; Org Mode and writing
        emacs-ox-gemini emacs-ox-pandoc pandoc emacs-org-ref emacs-org-make-toc
        emacs-ox-gfm emacs-ox-twbs
+       emacs-ob-go
        emacs-markdown-mode emacs-gemini-mode emacs-edit-indirect
        emacs-writegood-mode
        ;; emacspeak
