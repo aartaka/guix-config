@@ -69,6 +69,7 @@
        emacs-web-mode emacs-js2-mode emacs-rjsx-mode emacs-skewer-mode emacs-rainbow-mode
        emacs-smart-mode-line
        mu offlineimap3 emacs-bbdb
+       emacs-matrix-client
        curl ghostscript unoconv poppler imagemagick mupdf ripgrep pinentry
        aspell aspell-dict-ru aspell-dict-en
        wordnet
