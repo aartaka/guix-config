@@ -19,9 +19,7 @@
 
              (guix packages)
 
-             (nongnu packages emacs)
-
-             (guixrus packages emacs))
+             (nongnu packages emacs))
 
 (packages->manifest
  (list emacs
@@ -48,7 +46,7 @@
        emacs-ox-gemini emacs-ox-pandoc pandoc emacs-org-ref emacs-org-make-toc
        emacs-ox-gfm emacs-ox-twbs
        emacs-ob-go
-       emacs-markdown-mode emacs-gemini-mode emacs-edit-indirect
+       emacs-markdown-mode emacs-edit-indirect
        emacs-writegood-mode
        ;; emacspeak
        espeak-ng
