@@ -1,5 +1,6 @@
 (use-modules (gnu packages)
              (gnu packages base)
+             (gnu packages c)
              (gnu packages clojure)
 	     (gnu packages cmake)
              (gnu packages commencement)
@@ -31,6 +32,7 @@
  (list
   openssh
   ;; C/C++
+  tcc
   llvm clang clang-runtime clang-toolchain
   glibc gdb gcc-toolchain
   gnu-make cmake pkg-config m4
