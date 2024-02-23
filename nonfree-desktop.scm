@@ -133,12 +133,14 @@
  (packages
   (cons*
    nss-certs xinit xorg-server orca sugar-dark-sddm-theme custom-sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
+   postgresql postgis
    %base-packages))
 
  (services (cons* (service tor-service-type)
                   (service docker-service-type)
                   (service postgresql-service-type
                            (postgresql-configuration
+                            (postgresql postgresql)
                             (extension-packages (list postgis))
                             (config-file
                              (postgresql-config-file
