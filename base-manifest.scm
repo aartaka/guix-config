@@ -8,7 +8,7 @@
    "font-gnu-unifont"
    "font-google-material-design-icons"
    ;; GuixSD essentials and other mandatory packages
-   "libfixposix"
+   "libfixposix" "nss-certs"
    ;; Xorg utilities
    "xrdb" "xev" "xfontsel" "xmodmap" "xset" "xsetroot" "xinit" "xinput" "xcape"
    "xclip" "xdg-utils" "xrandr" "xgamma" "feh" "pulseaudio" "pamixer"
