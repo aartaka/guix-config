@@ -23,5 +23,5 @@
    ;; Games
    "dwarf-fortress" "ioquake3" "openmw" "minetest" "chocolate-doom"
    ;; Useful everyday programs.
-   "libreoffice" "keepassxc" "rxvt-unicode" "st" "vlc" "pavucontrol" "pamixer"
-   "openvpn" "electrum" "openssh"))
+   "libreoffice" "keepassxc" "rxvt-unicode" "vlc" "pavucontrol" "pamixer"
+   "openvpn" "electrum" "openssh" "w3m"))
