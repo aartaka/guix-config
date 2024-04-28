@@ -57,34 +57,6 @@
    Option \"NaturalScrolling\" \"true\"
   EndSection")
 
-(define custom-sbcl
-  (package
-   (inherit sbcl)
-   (arguments
-    `(#:phases
-      (modify-phases %standard-phases
-                     ,@(map (lambda (phase)
-                              (match phase
-                                (('replace ''build ((or 'lambda 'lambda*) args . body))
-                                 `(replace 'build
-                                           (lambda* ,args
-                                             ,@(map (lambda (form)
-                                                      (match form
-                                                        (('invoke "sh" "make.sh" . args)
-                                                         `(invoke "sh" "make.sh"
-                                                                  ,@(append (remove (lambda (a)
-                                                                                      (and (string? a)
-                                                                                           (string-prefix? "--with" a)))
-                                                                                    args)
-                                                                            (list "--fancy" "--with-sb-simd"))))
-                                                        (_ form)))
-                                                    body))))
-                                (_ phase)))
-                            (cddadr (find-tail (lambda (arg) (eq? #:phases arg))
-                                               (package-arguments sbcl)))))
-      ,@(cddr (find-tail (lambda (arg) (eq? #:phases arg))
-                         (package-arguments sbcl)))))))
-
 (operating-system
  (host-name "paranoidal")
  (timezone "Asia/Yerevan")
@@ -132,7 +104,7 @@
 
  (packages
   (cons*
-   nss-certs xinit xorg-server orca sugar-dark-sddm-theme custom-sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
+   nss-certs xinit xorg-server orca sugar-dark-sddm-theme sbcl cl-slynk stumpwm `(,stumpwm "lib") font-hack git nix
    postgresql postgis
    %base-packages))
 
