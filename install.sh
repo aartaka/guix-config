@@ -21,5 +21,5 @@ done
 
 if [ $# -eq 0 ];
 then
-    guix package -m "base-manifest.scm"
+    guix package -m "base-manifest.scm" --profile="$HOME/.guix-profile"
 fi
