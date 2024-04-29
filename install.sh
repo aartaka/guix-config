@@ -10,7 +10,7 @@ profile_names="$@"
 
 if [ 0 -eq $# ];
 then
-    profile_names=("emacs" "sec" "gimp" "sc" "nyxt" "icecat" "chromium" "firefox" "dev" "texlive")
+    profile_names=("emacs" "sec" "gimp" "sc" "icecat" "chromium" "firefox" "dev" "texlive")
 fi
 
 for NAME in ${profile_names[*]}; do
