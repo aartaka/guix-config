@@ -1,5 +1,17 @@
 (cons*
  (channel
+  (name 'guile-gsl)
+  (url "https://github.com/aartaka/guile-gsl.git")
+  (branch "master"))
+ (channel
+  (name 'guile-lmdb)
+  (url "https://github.com/aartaka/guile-lmdb.git")
+  (branch "master"))
+ (channel
+  (name 'guile-lapack)
+  (url "https://github.com/aartaka/guile-lapack.git")
+  (branch "master"))
+ (channel
   (name 'nonguix)
   (url "https://gitlab.com/nonguix/nonguix")
   ;; Enable signature verification:
