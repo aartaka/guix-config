@@ -55,7 +55,8 @@
        ;; Lisps
        emacs-sly cl-slynk
        emacs-sly-stepper emacs-sly-quicklisp
-       emacs-sly-named-readtables emacs-sly-macrostep emacs-sly-asdf
+       ;; emacs-sly-named-readtables
+       emacs-sly-macrostep emacs-sly-asdf
        emacs-helm-sly emacs-helm-xref
        emacs-geiser emacs-geiser-racket emacs-geiser-guile emacs-racket-mode
        emacs-paredit
