@@ -12,6 +12,10 @@
   (url "https://github.com/aartaka/guile-lapack.git")
   (branch "master"))
  (channel
+  (name 'mgamma)
+  (url "https://github.com/aartaka/mgamma.git")
+  (branch "master"))
+ (channel
   (name 'nonguix)
   (url "https://gitlab.com/nonguix/nonguix")
   ;; Enable signature verification:
