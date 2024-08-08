@@ -110,6 +110,7 @@
 
  (services (cons* (service tor-service-type)
                   (service docker-service-type)
+                  (service containerd-service-type)
                   (service postgresql-service-type
                            (postgresql-configuration
                             (postgresql postgresql)
