@@ -104,7 +104,7 @@
 
  (packages
   (cons*
-   nss-certs xinit xorg-server orca sugar-dark-sddm-theme sbcl cl-slynk stumpwm font-hack git nix
+   xinit xorg-server orca sugar-dark-sddm-theme sbcl cl-slynk stumpwm font-hack git nix
    postgresql postgis
    %base-packages))
 
