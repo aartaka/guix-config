@@ -99,7 +99,7 @@
                (name "aartaka")
                (comment "Artyom Bologov")
                (group "users")
-               (supplementary-groups '("wheel" "netdev" "audio" "video" "input" "lp" "dialout" "tty")))
+               (supplementary-groups '("libvirt" "wheel" "netdev" "audio" "video" "input" "lp" "dialout" "tty")))
               %base-user-accounts))
 
  (packages
