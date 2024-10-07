@@ -90,7 +90,7 @@
                        (type "btrfs")
                        (dependencies mapped-devices))
                       (file-system
-                       (device (file-system-label "ESP"))
+                       (device "/dev/nvme0n1p1")
                        (mount-point "/boot/efi")
                        (type "vfat")))
                 %base-file-systems))
