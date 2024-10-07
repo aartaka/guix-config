@@ -106,6 +106,7 @@
   (cons*
    xinit xorg-server orca sugar-dark-sddm-theme sbcl cl-slynk stumpwm font-hack git nix
    postgresql postgis
+   dwm
    %base-packages))
 
  (services (cons* (service tor-service-type)
