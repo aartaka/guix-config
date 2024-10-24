@@ -44,6 +44,6 @@
   libffi ;; For ECL
   ccl ecl abcl gcl clisp allegro-cl
   ;; Lisps that are not CL
-  racket
+  racket kawa chicken gauche gambit-c gerbil stklos
   ;; Other
   lua go python jupyter node-lts))
